@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: Arial, sans-serif;
 }
 
-/* Body */
+/* BODY */
 body {
   background: #000;
   color: #fff;
@@ -14,25 +14,25 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* HEADER */
 .header {
-  padding: 20px 0 10px;
+  padding: 20px 0;
 }
 
 .logo {
   max-width: 140px;
-  margin: 0 auto;
   display: block;
+  margin: 0 auto;
 }
 
-/* Hero */
+/* HERO */
 .hero {
-  padding: 50px 20px 70px;
+  padding: 60px 20px 80px;
 }
 
 .hero h1 {
   color: #ff2f92;
-  font-size: 34px;
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
@@ -41,21 +41,37 @@ body {
   margin-bottom: 25px;
 }
 
-/* Button */
+/* BUTTON */
 .btn {
-  display: inline-block;
   background: #ff2f92;
-  color: white;
-  padding: 12px 28px;
+  color: #fff;
+  padding: 14px 30px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+  display: inline-block;
 }
 
-/* Services */
-.services {
+/* ABOUT */
+.about {
   padding: 60px 20px;
   background: #0b0b0b;
+}
+
+.about h2 {
+  color: #ff2f92;
+  margin-bottom: 15px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  color: #ccc;
+}
+
+/* SERVICES */
+.services {
+  padding: 60px 20px;
 }
 
 .services h2 {
@@ -64,41 +80,91 @@ body {
 }
 
 .service-box {
-  background: #000;
+  background: #0b0b0b;
   border: 1px solid #222;
   padding: 16px;
   margin: 12px auto;
   width: 280px;
   border-radius: 10px;
+  transition: transform 0.3s;
 }
 
-/* Contact */
+.service-box:hover {
+  transform: scale(1.05);
+}
+
+/* LEAD FORM */
+.lead-form {
+  padding: 60px 20px;
+  background: #0b0b0b;
+}
+
+.lead-form h2 {
+  color: #ff2f92;
+  margin-bottom: 20px;
+}
+
+.lead-form form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.lead-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+.lead-form button {
+  width: 100%;
+  padding: 12px;
+  background: #ff2f92;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* CONTACT */
 .contact {
   padding: 50px 20px;
-  background: #000;
 }
 
 .contact h2 {
   color: #ff2f92;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-/* Footer */
+/* FOOTER */
 .footer {
   padding: 15px;
-  background: #000;
-  font-size: 14px;
   color: #777;
+  font-size: 14px;
 }
 
-/* Mobile */
+/* ANIMATION */
+.fade-in {
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 26px;
-  }
-
-  .logo {
-    max-width: 120px;
   }
 
   .service-box {
