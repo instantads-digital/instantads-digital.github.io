@@ -2,87 +2,71 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  background-color: #000;
-  color: #fff;
+  background: black;
+  color: white;
+  text-align: center;
 }
 
 /* Header */
 .header {
-  text-align: center;
   padding: 20px;
 }
 
 .logo {
-  max-width: 200px;
+  width: 180px;
 }
 
 /* Hero */
 .hero {
-  text-align: center;
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 
 .hero h1 {
   color: #ff2b8a;
-  font-size: 32px;
   margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-/* Button */
 .cta-btn {
-  display: inline-block;
-  padding: 12px 26px;
-  background: linear-gradient(90deg, #ff2b8a, #9b00ff);
-  color: #fff;
+  padding: 10px 22px;
+  background: #ff2b8a;
+  color: white;
   text-decoration: none;
-  border-radius: 25px;
-  font-weight: bold;
+  border-radius: 20px;
 }
 
 /* Services */
 .services {
-  padding: 40px 20px;
-  text-align: center;
+  padding: 30px 20px;
 }
 
 .services h2 {
   color: #ff2b8a;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .service-box {
   background: #111;
-  padding: 20px;
-  margin: 15px auto;
-  max-width: 500px;
-  border-radius: 10px;
+  margin: 8px auto;
+  padding: 12px;
+  width: 260px;
+  border-radius: 8px;
 }
 
 /* Contact */
 .contact {
-  padding: 40px 20px;
-  text-align: center;
+  padding: 30px 20px;
   background: #111;
 }
 
-.contact h2 {
-  color: #ff2b8a;
-  margin-bottom: 10px;
-}
-
-/* Footer */
 .footer {
-  text-align: center;
   padding: 15px;
-  font-size: 14px;
-  color: #aaa;
+  color: gray;
 }
