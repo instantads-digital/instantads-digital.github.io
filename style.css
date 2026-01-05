@@ -8,32 +8,32 @@
 
 /* Body */
 body {
-  background: black;
-  color: white;
+  background: #000;
+  color: #fff;
   text-align: center;
   line-height: 1.6;
 }
 
 /* Header */
 .header {
-  padding: 30px 0;
+  padding: 20px 0 10px;
 }
 
 .logo {
-  max-width: 180px;
-  display: block;
+  max-width: 140px;
   margin: 0 auto;
+  display: block;
 }
 
 /* Hero */
 .hero {
-  padding: 60px 20px;
+  padding: 50px 20px 70px;
 }
 
 .hero h1 {
   color: #ff2f92;
-  font-size: 36px;
-  margin-bottom: 15px;
+  font-size: 34px;
+  margin-bottom: 10px;
 }
 
 .hero p {
@@ -46,7 +46,7 @@ body {
   display: inline-block;
   background: #ff2f92;
   color: white;
-  padding: 12px 25px;
+  padding: 12px 28px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
@@ -55,25 +55,27 @@ body {
 /* Services */
 .services {
   padding: 60px 20px;
+  background: #0b0b0b;
 }
 
 .services h2 {
   color: #ff2f92;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .service-box {
-  background: #111;
-  padding: 15px;
+  background: #000;
+  border: 1px solid #222;
+  padding: 16px;
   margin: 12px auto;
-  width: 300px;
-  border-radius: 8px;
+  width: 280px;
+  border-radius: 10px;
 }
 
 /* Contact */
 .contact {
   padding: 50px 20px;
-  background: #111;
+  background: #000;
 }
 
 .contact h2 {
@@ -84,15 +86,19 @@ body {
 /* Footer */
 .footer {
   padding: 15px;
-  background: black;
+  background: #000;
   font-size: 14px;
-  color: #888;
+  color: #777;
 }
 
-/* ✅ Mobile Optimization */
+/* Mobile */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 28px;
+    font-size: 26px;
+  }
+
+  .logo {
+    max-width: 120px;
   }
 
   .service-box {
