@@ -1,3 +1,8 @@
+/* THEME COLOR */
+:root {
+  --primary-color: #3aa0ff; /* Electric Blue */
+}
+
 /* RESET */
 * {
   margin: 0;
@@ -14,7 +19,7 @@ body {
   line-height: 1.6;
 }
 
-/* FADE ANIMATION */
+/* ANIMATION */
 .fade-in {
   animation: fadeUp 1s ease forwards;
 }
@@ -47,7 +52,7 @@ body {
 }
 
 .hero h1 {
-  color: #ff2f92;
+  color: var(--primary-color);
   font-size: 36px;
   margin-bottom: 10px;
 }
@@ -59,7 +64,7 @@ body {
 
 /* BUTTON */
 .btn {
-  background: #ff2f92;
+  background: var(--primary-color);
   color: #fff;
   padding: 14px 30px;
   border-radius: 30px;
@@ -75,7 +80,7 @@ body {
 }
 
 .about h2 {
-  color: #ff2f92;
+  color: var(--primary-color);
   margin-bottom: 15px;
 }
 
@@ -91,7 +96,7 @@ body {
 }
 
 .services h2 {
-  color: #ff2f92;
+  color: var(--primary-color);
   margin-bottom: 30px;
 }
 
@@ -102,21 +107,21 @@ body {
   margin: 12px auto;
   width: 300px;
   border-radius: 10px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, border-color 0.3s;
 }
 
 .service-box:hover {
   transform: scale(1.05);
+  border-color: var(--primary-color);
 }
 
 /* CASE STUDY */
 .case-studies {
   padding: 60px 20px;
-  background: #000;
 }
 
 .case-studies h2 {
-  color: #ff2f92;
+  color: var(--primary-color);
   margin-bottom: 25px;
 }
 
@@ -124,13 +129,9 @@ body {
   background: #0b0b0b;
   border: 1px solid #222;
   padding: 20px;
-  margin: auto;
   max-width: 720px;
+  margin: auto;
   border-radius: 10px;
-}
-
-.case-box h3 {
-  margin-bottom: 10px;
 }
 
 .case-image {
@@ -154,7 +155,7 @@ body {
 }
 
 .lead-form h2 {
-  color: #ff2f92;
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 
@@ -174,7 +175,7 @@ body {
 .lead-form button {
   width: 100%;
   padding: 12px;
-  background: #ff2f92;
+  background: var(--primary-color);
   border: none;
   border-radius: 25px;
   color: #fff;
@@ -188,7 +189,7 @@ body {
 }
 
 .contact h2 {
-  color: #ff2f92;
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 
