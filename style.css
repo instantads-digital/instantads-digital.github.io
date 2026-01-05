@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -5,80 +6,96 @@
   font-family: Arial, sans-serif;
 }
 
-html, body {
-  width: 100%;
-  height: auto;
-  min-height: 100%;
-  overflow-y: auto;   /* FORCE SCROLL */
-  background: #000;
-  color: #fff;
+/* Body */
+body {
+  background: black;
+  color: white;
+  text-align: center;
+  line-height: 1.6;
 }
 
 /* Header */
 .header {
-  padding: 20px;
-  text-align: center;
+  padding: 30px 0;
 }
 
 .logo {
-  width: 180px;
+  max-width: 180px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Hero */
 .hero {
-  padding: 40px 20px;
-  text-align: center;
+  padding: 60px 20px;
 }
 
 .hero h1 {
-  color: #ff2b8a;
-  margin-bottom: 10px;
-}
-
-.hero p {
+  color: #ff2f92;
+  font-size: 36px;
   margin-bottom: 15px;
 }
 
-.cta-btn {
-  padding: 10px 22px;
-  background: #ff2b8a;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 20px;
+.hero p {
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.btn {
   display: inline-block;
+  background: #ff2f92;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* Services */
 .services {
-  padding: 40px 20px;
-  background: #111;
-  text-align: center;
+  padding: 60px 20px;
 }
 
 .services h2 {
-  color: #ff2b8a;
-  margin-bottom: 15px;
+  color: #ff2f92;
+  margin-bottom: 25px;
 }
 
 .service-box {
-  background: #000;
-  border: 1px solid #333;
-  margin: 10px auto;
+  background: #111;
   padding: 15px;
-  width: 260px;
+  margin: 12px auto;
+  width: 300px;
   border-radius: 8px;
 }
 
 /* Contact */
 .contact {
-  padding: 40px 20px;
-  background: #181818;
-  text-align: center;
+  padding: 50px 20px;
+  background: #111;
+}
+
+.contact h2 {
+  color: #ff2f92;
+  margin-bottom: 15px;
 }
 
 /* Footer */
 .footer {
   padding: 15px;
-  text-align: center;
-  color: gray;
+  background: black;
+  font-size: 14px;
+  color: #888;
+}
+
+/* ✅ Mobile Optimization */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .service-box {
+    width: 90%;
+  }
 }
