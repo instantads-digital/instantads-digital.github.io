@@ -5,15 +5,19 @@
   font-family: Arial, sans-serif;
 }
 
-body {
-  background: black;
-  color: white;
-  text-align: center;
+html, body {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow-y: auto;   /* FORCE SCROLL */
+  background: #000;
+  color: #fff;
 }
 
 /* Header */
 .header {
   padding: 20px;
+  text-align: center;
 }
 
 .logo {
@@ -22,7 +26,8 @@ body {
 
 /* Hero */
 .hero {
-  padding: 30px 20px;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .hero h1 {
@@ -37,14 +42,17 @@ body {
 .cta-btn {
   padding: 10px 22px;
   background: #ff2b8a;
-  color: white;
+  color: #fff;
   text-decoration: none;
   border-radius: 20px;
+  display: inline-block;
 }
 
 /* Services */
 .services {
-  padding: 30px 20px;
+  padding: 40px 20px;
+  background: #111;
+  text-align: center;
 }
 
 .services h2 {
@@ -53,20 +61,24 @@ body {
 }
 
 .service-box {
-  background: #111;
-  margin: 8px auto;
-  padding: 12px;
+  background: #000;
+  border: 1px solid #333;
+  margin: 10px auto;
+  padding: 15px;
   width: 260px;
   border-radius: 8px;
 }
 
 /* Contact */
 .contact {
-  padding: 30px 20px;
-  background: #111;
+  padding: 40px 20px;
+  background: #181818;
+  text-align: center;
 }
 
+/* Footer */
 .footer {
   padding: 15px;
+  text-align: center;
   color: gray;
 }
