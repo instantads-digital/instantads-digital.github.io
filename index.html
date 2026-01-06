@@ -18,8 +18,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://instantads-digital.github.io">
 
-  <link rel="stylesheet" href="style.css?v=2">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -30,10 +29,9 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero fade-in">
-   <h1>Turn Ad Spend into <span>Predictable Leads</span></h1>
-<p>Google Ads & SEO for Service-Based Businesses</p>
-
+  <section class="hero">
+    <h1>Turn Ad Spend into <span>Predictable Leads</span></h1>
+    <p>Google Ads & SEO for Service-Based Businesses</p>
 
     <a href="https://wa.me/918923736292" target="_blank" class="btn">
       Get Free Ads Audit
@@ -54,7 +52,6 @@
   <!-- SERVICES -->
   <section class="services fade-in">
     <h2>Our Services</h2>
-
     <div class="service-box">Lead Generation Campaigns</div>
     <div class="service-box">Google Ads Management</div>
     <div class="service-box">Meta Ads (Facebook & Instagram)</div>
@@ -70,13 +67,10 @@
       <p>
         Generated <strong>1,000+ qualified clicks</strong> and
         <strong>140+ conversions</strong> in 30 days using Google Ads.
-        Achieved an average <strong>cost per lead of ~$18</strong> while
-        improving impression share month-over-month.
+        Achieved an average <strong>cost per lead of ~$18</strong>.
       </p>
 
-      <img src="google-ads-result.png"
-           alt="Google Ads Lead Generation Results"
-           class="case-image">
+      <img src="google-ads-result.png" class="case-image" alt="Google Ads Results">
 
       <p class="case-note">
         *Client name and sensitive data hidden for privacy*
@@ -89,47 +83,45 @@
     <h2>Get Free Consultation</h2>
 
     <form action="https://formsubmit.co/instantads0@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number" required>
 
-  <!-- USER INPUTS -->
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="tel" name="phone" placeholder="Your Phone Number" required>
+      <input type="hidden" name="_subject" value="New Lead from InstantAds Website">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://instantads-digital.github.io/thank-you.html">
 
-  <!-- FORM SETTINGS -->
-  <input type="hidden" name="_subject" value="New Lead from InstantAds Website">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://instantads-digital.github.io/thank-you.html">
-
-  <button type="submit">Request Call Back</button>
-</form>
-
+      <button type="submit">Request Call Back</button>
+    </form>
   </section>
 
   <!-- CONTACT -->
-<section class="contact fade-in">
-  <h2>Contact</h2>
-
-  <a href="tel:+918923736292" class="call-btn">
-    📞 Call Us: +91 8923736292
-  </a>
-
-  <p style="margin-top:12px;">📧 instantads0@gmail.com</p>
-</section>
-
+  <section class="contact fade-in">
+    <h2>Contact</h2>
+    <a href="tel:+918923736292" class="call-btn">📞 Call Us: +91 8923736292</a>
+    <p style="margin-top:12px;">📧 instantads0@gmail.com</p>
+  </section>
 
   <!-- FOOTER -->
   <footer class="footer">
     © 2026 InstantAds. All Rights Reserved.
   </footer>
-<!-- WHATSAPP FLOATING BUTTON -->
-<a href="https://wa.me/918923736292"
-   class="whatsapp-float"
-   target="_blank">
-  💬 WhatsApp
-</a>
-<!-- STICKY CALL BUTTON -->
-<a href="tel:+918923736292" class="call-float">
-  📞 Call Now
-</a>
+
+  <!-- FLOATING BUTTONS -->
+  <a href="https://wa.me/918923736292" class="whatsapp-float" target="_blank">💬 WhatsApp</a>
+  <a href="tel:+918923736292" class="call-float">📞 Call Now</a>
+
+  <!-- SCROLL ANIMATION SCRIPT -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
