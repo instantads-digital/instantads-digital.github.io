@@ -269,6 +269,66 @@ h2 {
   color: var(--primary-color);
   font-size: 14px;
 }
+/* =========================
+   TESTIMONIALS
+========================= */
+.testimonials {
+  padding: 70px 20px;
+  background: #0b0b0b;
+}
+
+.testimonials h2 {
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonial-box {
+  background: #000;
+  border: 1px solid #222;
+  padding: 30px;
+  border-radius: 14px;
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+}
+
+.testimonial-text {
+  color: #ddd;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.testimonial-text::before {
+  content: "“";
+  font-size: 40px;
+  color: var(--primary-color);
+  position: absolute;
+  left: -12px;
+  top: -10px;
+}
+
+.testimonial-author {
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .testimonial-grid {
+    flex-direction: column;
+  }
+}
 
 /* MOBILE */
 @media (max-width: 768px) {
