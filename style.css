@@ -80,11 +80,11 @@ body {
 }
 
 /* SECTIONS */
-.about, .services, .case-studies, .lead-form {
+.about, .services, .case-studies, .contact {
   padding: 60px 20px;
 }
 
-.about, .lead-form {
+.about {
   background: #0b0b0b;
 }
 
@@ -121,6 +121,50 @@ h2 {
   width: 100%;
   margin-top: 20px;
   border-radius: 10px;
+}
+
+/* FORM */
+.lead-form {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #000, #0b0b0b);
+}
+
+.form-card {
+  max-width: 420px;
+  margin: auto;
+  background: #0b0b0b;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+}
+
+.form-subtext {
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.form-card input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+.form-card button {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.trust-text {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 12px;
 }
 
 /* CONTACT */
