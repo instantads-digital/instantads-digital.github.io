@@ -216,3 +216,25 @@ h2 {
     width: 90%;
   }
 }
+/* =========================
+   FAQ STYLING IMPROVEMENT
+========================= */
+
+.about h2 {
+  margin-bottom: 25px;
+}
+
+/* Question */
+.about p strong {
+  display: block;
+  color: var(--primary-color);
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+/* Answer */
+.about p {
+  margin-bottom: 20px;
+  color: #ccc;
+  line-height: 1.7;
+}
