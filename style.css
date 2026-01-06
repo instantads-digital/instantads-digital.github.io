@@ -46,11 +46,12 @@ body {
   margin: 0 auto;
 }
 
-/* HERO (BACKGROUND IMAGE) */
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
   position: relative;
   padding: 80px 20px 120px;
-
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.7),
@@ -59,15 +60,23 @@ body {
     url("hero-bg.jpg") center / cover no-repeat;
 }
 
+/* HERO HEADING */
 .hero h1 {
-  color: var(--primary-color);
   font-size: 36px;
   margin-bottom: 10px;
+  color: #ffffff;
 }
 
+/* HIGHLIGHT WORD */
+.hero h1 span {
+  color: var(--primary-color);
+}
+
+/* HERO SUBTEXT */
 .hero p {
   color: #ddd;
   margin-bottom: 25px;
+  font-size: 16px;
 }
 
 /* BUTTON */
@@ -82,7 +91,9 @@ body {
   box-shadow: 0 10px 25px rgba(34, 197, 94, 0.35);
 }
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 .about {
   padding: 60px 20px;
   background: #0b0b0b;
@@ -99,7 +110,9 @@ body {
   color: #ccc;
 }
 
-/* SERVICES */
+/* =========================
+   SERVICES
+========================= */
 .services {
   padding: 60px 20px;
 }
@@ -124,7 +137,9 @@ body {
   border-color: var(--primary-color);
 }
 
-/* CASE STUDY */
+/* =========================
+   CASE STUDY
+========================= */
 .case-studies {
   padding: 60px 20px;
 }
@@ -157,7 +172,9 @@ body {
   color: #aaa;
 }
 
-/* LEAD FORM */
+/* =========================
+   LEAD FORM
+========================= */
 .lead-form {
   padding: 60px 20px;
   background: #0b0b0b;
@@ -192,7 +209,9 @@ body {
   cursor: pointer;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 .contact {
   padding: 50px 20px;
 }
@@ -201,6 +220,7 @@ body {
   color: var(--primary-color);
   margin-bottom: 10px;
 }
+
 /* CALL BUTTON */
 .call-btn {
   display: inline-block;
@@ -214,12 +234,15 @@ body {
   box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4);
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 .footer {
   padding: 15px;
   color: #777;
   font-size: 14px;
 }
+
 /* WHATSAPP FLOATING BUTTON */
 .whatsapp-float {
   position: fixed;
@@ -234,6 +257,7 @@ body {
   box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
   z-index: 999;
 }
+
 /* STICKY CALL BUTTON */
 .call-float {
   position: fixed;
@@ -249,7 +273,9 @@ body {
   z-index: 999;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
   .hero {
     padding: 80px 15px 100px;
