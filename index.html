@@ -3,73 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="favicon.png">
-  <title>InstantAds | Lead Generation & Digital Marketing Agency</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO -->
-  <meta name="description" content="InstantAds is a digital marketing agency offering Lead Generation, Google Ads, Meta Ads and SEO services.">
-  <meta name="keywords" content="lead generation agency, google ads services, meta ads agency, seo services, digital marketing agency">
+  <!-- PRIMARY SEO -->
+  <title>InstantAds | Lead Generation Agency for Google Ads & SEO</title>
+  <meta name="description" content="InstantAds is a lead generation agency helping service-based businesses grow using Google Ads, Meta Ads, and SEO. Get predictable, high-quality leads.">
+  <meta name="keywords" content="lead generation agency, google ads lead generation, seo for service businesses, meta ads agency, digital marketing agency">
   <meta name="author" content="InstantAds">
 
-  <link rel="stylesheet" href="style.css">
+  <!-- RESPONSIVE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SOCIAL PREVIEW -->
+  <meta property="og:title" content="InstantAds | Lead Generation Agency">
+  <meta property="og:description" content="Google Ads & SEO that turns clicks into predictable leads.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://instantads-digital.github.io">
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
 
   <!-- HEADER -->
   <header class="header fade-in">
-    <img src="logo.png" alt="InstantAds Logo" class="logo">
+    <img src="logo.png" alt="InstantAds Lead Generation Agency Logo" class="logo">
   </header>
 
   <!-- HERO -->
   <section class="hero">
     <h1>Turn Ad Spend into <span>Predictable Leads</span></h1>
-    <p>Google Ads & SEO for Service-Based Businesses</p>
+    <p>Google Ads & SEO That Converts Clicks Into Customers</p>
 
     <a href="https://wa.me/918923736292" target="_blank" class="btn">
       Get Free Ads Audit
     </a>
   </section>
 
+  <!-- QUICK PROOF STRIP -->
+  <section class="about fade-in">
+    <p>
+      <strong>140+ Leads in 30 Days</strong> •
+      <strong>$18 Avg Cost per Lead</strong> •
+      <strong>Multiple Service Industries</strong>
+    </p>
+  </section>
+
   <!-- ABOUT -->
   <section class="about fade-in">
-    <h2>About InstantAds</h2>
+    <h2>About Our Lead Generation Agency</h2>
     <p>
-      InstantAds is a performance-driven digital marketing agency focused on
-      generating quality leads and measurable business growth.
-      We help service-based businesses scale using Google Ads, Meta Ads, SEO,
-      and conversion-focused strategies.
+      InstantAds is a performance-driven lead generation agency focused on helping
+      service-based businesses grow using Google Ads, Meta Ads, and SEO.
+      We specialize in high-intent traffic, conversion optimization, and scalable
+      growth strategies that produce measurable results.
     </p>
   </section>
 
   <!-- SERVICES -->
   <section class="services fade-in">
-    <h2>Our Services</h2>
+    <h2>Lead Generation & Digital Marketing Services</h2>
+
     <div class="service-box">Lead Generation Campaigns</div>
     <div class="service-box">Google Ads Management</div>
     <div class="service-box">Meta Ads (Facebook & Instagram)</div>
     <div class="service-box">SEO & Organic Growth</div>
   </section>
 
+  <!-- SEO CONTENT BLOCK -->
+  <section class="about fade-in">
+    <h2>Lead Generation for Service-Based Businesses</h2>
+    <p>
+      We work with service-based businesses including real estate professionals,
+      healthcare providers, home services, legal firms, and consultants.
+      Our lead generation systems are designed to deliver qualified inquiries,
+      not just traffic, using Google Ads, SEO, and conversion-focused funnels.
+    </p>
+  </section>
+
   <!-- CASE STUDY -->
   <section class="case-studies fade-in">
-    <h2>Real Google Ads Results</h2>
+    <h2>Google Ads Case Study – Real Lead Generation Results</h2>
 
     <div class="case-box">
       <h3>Local Service Business – Canada</h3>
       <p>
         Generated <strong>1,000+ qualified clicks</strong> and
-        <strong>140+ conversions</strong> in 30 days using Google Ads with
-        an average <strong>cost per lead of ~$18</strong>.
+        <strong>140+ conversions</strong> in 30 days using Google Ads.
+        Achieved an average <strong>cost per lead of ~$18</strong> while
+        improving impression share month-over-month.
       </p>
 
-      <img src="google-ads-result.png" class="case-image" alt="Google Ads Results">
+      <img src="google-ads-result.png"
+           class="case-image"
+           alt="Google Ads lead generation results showing clicks and conversions">
 
       <p class="case-note">
         *Client name and sensitive data hidden for privacy*
       </p>
     </div>
+  </section>
+
+  <!-- FAQ (SEO BOOST) -->
+  <section class="about fade-in">
+    <h2>Frequently Asked Questions</h2>
+
+    <p><strong>How long does it take to start getting leads?</strong><br>
+    Most campaigns begin generating leads within 2–4 weeks.</p>
+
+    <p><strong>Do you work with international clients?</strong><br>
+    Yes, we work with service-based businesses globally.</p>
+
+    <p><strong>Do you manage ad budgets?</strong><br>
+    We manage campaigns and optimization. Ad spend is paid directly by the client.</p>
   </section>
 
   <!-- LEAD FORM -->
@@ -83,6 +129,7 @@
       <form action="https://formsubmit.co/instantads0@gmail.com" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="tel" name="phone" placeholder="Your Phone Number" required>
+        <input type="text" name="business" placeholder="Your Business Type (Optional)">
 
         <input type="hidden" name="_subject" value="New Lead from InstantAds Website">
         <input type="hidden" name="_captcha" value="false">
@@ -91,15 +138,13 @@
         <button type="submit">Get Free Strategy Call</button>
       </form>
 
-      <p class="trust-text">
-        🔒 We never spam. Your details are 100% safe.
-      </p>
+      <p class="trust-text">🔒 We never spam. Your details are safe.</p>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="contact fade-in">
-    <h2>Contact</h2>
+  <section class="contact fade-in" id="contact">
+    <h2>Contact InstantAds</h2>
     <a href="tel:+918923736292" class="call-btn">📞 Call Us: +91 8923736292</a>
     <p style="margin-top:12px;">📧 instantads0@gmail.com</p>
   </section>
@@ -113,7 +158,7 @@
   <a href="https://wa.me/918923736292" class="whatsapp-float" target="_blank">💬 WhatsApp</a>
   <a href="tel:+918923736292" class="call-float">📞 Call Now</a>
 
-  <!-- SCROLL REVEAL SCRIPT -->
+  <!-- SCROLL REVEAL -->
   <script>
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
