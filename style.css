@@ -313,4 +313,13 @@ h2 {
   .call-float {
     bottom: 15px;
   }
+
+  /* 🔥 FORCE OFFSET FOR ANCHOR LINKS */
+#home,
+#services,
+#case,
+#contact {
+  scroll-margin-top: 100px;
+}
+  
 }
