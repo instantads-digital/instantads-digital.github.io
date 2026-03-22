@@ -107,6 +107,8 @@ section {
   text-align: center;
   width: 100%;
   overflow: hidden;
+
+  scroll-margin-top: 90px;
 }
 
 /* CONTENT WIDTH */
