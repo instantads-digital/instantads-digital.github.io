@@ -10,6 +10,12 @@
   font-family: Arial, sans-serif;
 }
 
+/* 🔥 CRITICAL FIX: PREVENT ZOOM / OVERFLOW */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   background: #000;
   color: #fff;
@@ -46,6 +52,7 @@ body {
 .nav-menu {
   display: flex;
   align-items: center;
+  flex-wrap: wrap; /* 🔥 FIX */
 }
 
 .nav-menu a {
@@ -53,6 +60,7 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
+  white-space: nowrap; /* 🔥 FIX */
 }
 
 .nav-menu a:hover {
@@ -94,9 +102,11 @@ body {
 section {
   padding: 60px 20px;
   text-align: center;
+  width: 100%; /* 🔥 FIX */
+  overflow: hidden; /* 🔥 FIX */
 }
 
-/* 🔥 FIX: CONTENT WIDTH */
+/* CONTENT WIDTH */
 section p,
 section ul,
 section h3 {
@@ -117,7 +127,7 @@ h2 {
   color: #ccc;
 }
 
-/* WHY SECTION FIX */
+/* WHY */
 .why-us {
   text-align: center;
 }
@@ -224,7 +234,7 @@ h2 {
   text-align: center;
 }
 
-/* FLOATING BUTTONS (FINAL PERFECT FIX) */
+/* FLOAT BUTTONS */
 .whatsapp-float,
 .call-float {
   position: fixed;
@@ -235,27 +245,26 @@ h2 {
   z-index: 999;
 }
 
-/* LEFT */
 .whatsapp-float {
   left: 10px;
   background: #25D366;
   color: #000;
 }
 
-/* RIGHT */
 .call-float {
   right: 10px;
   background: var(--primary-color);
   color: #000;
 }
 
-/* MOBILE FIX */
+/* MOBILE FIX (FINAL) */
 @media (max-width: 768px) {
 
-  /* 🔥 FIX: HEADER BREAK */
+  /* 🔥 MAIN FIX: NO ZOOM */
   .nav-container {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
   }
 
   .logo {
@@ -263,14 +272,14 @@ h2 {
   }
 
   .nav-menu {
-    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    max-width: 100%;
   }
 
   .nav-menu a {
     font-size: 11px;
-    margin-left: 10px;
+    margin: 4px 6px;
   }
 
   /* HERO */
@@ -283,14 +292,12 @@ h2 {
     flex-direction: column;
   }
 
-  /* FLOAT BUTTON FIX */
+  /* BUTTON FIX */
   .whatsapp-float {
     bottom: 70px;
-    left: 10px;
   }
 
   .call-float {
-    right: 10px;
     bottom: 15px;
   }
 }
