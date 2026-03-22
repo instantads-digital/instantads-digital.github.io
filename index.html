@@ -270,14 +270,14 @@
 
 <!-- 🔥 FINAL NAV SCROLL FIX (WORKING) -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+window.onload = function () {
 
   const header = document.querySelector(".header");
 
-  document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
+  document.querySelectorAll(".nav-menu a").forEach(link => {
+    link.onclick = function(e) {
 
-      const targetId = this.getAttribute('href');
+      const targetId = this.getAttribute("href");
 
       if (!targetId.startsWith("#")) return;
 
@@ -288,17 +288,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const headerHeight = header.offsetHeight;
 
-      const y = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 5;
+      const position = target.offsetTop - headerHeight - 10;
 
       window.scrollTo({
-        top: y,
+        top: position,
         behavior: "smooth"
       });
 
-    });
+    };
   });
 
-});
+};
 </script>
 <!-- FAQ SCHEMA -->
 <script type="application/ld+json">
