@@ -268,19 +268,25 @@
   });
 </script>
 
-<!-- 🔥 FINAL NAV SCROLL FIX -->
+<!-- 🔥 FINAL NAV SCROLL FIX (WORKING) -->
 <script>
   document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', function(e) {
-      e.preventDefault();
 
       const targetId = this.getAttribute('href');
+
+      // Only handle internal links
+      if (!targetId.startsWith("#")) return;
+
+      e.preventDefault();
+
       const target = document.querySelector(targetId);
+      if (!target) return;
 
       const header = document.querySelector('.header');
       const headerHeight = header.offsetHeight;
 
-      const targetPosition = target.offsetTop - headerHeight;
+      const targetPosition = target.offsetTop - headerHeight - 5;
 
       window.scrollTo({
         top: targetPosition,
