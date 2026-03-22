@@ -278,9 +278,24 @@ h2 {
   padding: 70px 20px;
   background:
     linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
-    url("your-background.jpg") center / cover no-repeat;
+    url("background.jpg") center / cover no-repeat;
 }
 
+.testimonial-box {
+  position: relative;
+  padding-top: 60px;
+}
+
+.client-logo {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 80px;
+  height: auto;
+  background: #000;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
 .testimonials h2 {
   color: var(--primary-color);
   margin-bottom: 40px;
@@ -374,17 +389,25 @@ h2 {
   line-height: 1.7;
 }
 .client-logo {
-  width: 80px;
+  width: 90px;
   height: auto;
   margin-bottom: 15px;
-  filter: brightness(0) invert(1); /* makes logo white */
-  opacity: 0.9;
-  background: transparent;
+  object-fit: contain;
+  transition: all 0.3s ease;
 }
 
-.testimonial-box:hover .client-logo {
-  filter: none; /* original color */
-  opacity: 1;
+/* Desktop hover effect */
+@media (hover: hover) {
+  .client-logo {
+    filter: grayscale(100%);
+    opacity: 0.8;
+  }
+
+  .testimonial-box:hover .client-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+  }
 }
 .nav-container {
   display: flex;
@@ -399,7 +422,7 @@ h2 {
   color: #fff;
   margin-left: 20px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   transition: color 0.3s;
 }
 
