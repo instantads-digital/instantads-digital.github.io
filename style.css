@@ -276,7 +276,9 @@ h2 {
 ========================= */
 .testimonials {
   padding: 70px 20px;
-  background: #0b0b0b;
+  background:
+    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
+    url("your-background.jpg") center / cover no-repeat;
 }
 
 .testimonials h2 {
