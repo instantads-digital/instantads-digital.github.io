@@ -321,5 +321,14 @@ h2 {
 #contact {
   scroll-margin-top: 100px;
 }
-  
+  /* 🔥 FINAL ANCHOR FIX */
+#home::before,
+#services::before,
+#case::before,
+#contact::before {
+  content: "";
+  display: block;
+  height: 90px; /* header height */
+  margin-top: -90px;
+}
 }
