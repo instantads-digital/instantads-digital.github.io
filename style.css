@@ -375,12 +375,13 @@ h2 {
   width: 80px;
   height: auto;
   margin-bottom: 15px;
-  filter: grayscale(100%);
+  filter: brightness(0) invert(1); /* makes logo white */
   opacity: 0.9;
+  background: transparent;
 }
 
 .testimonial-box:hover .client-logo {
-  filter: grayscale(0%);
+  filter: none; /* original color */
   opacity: 1;
 }
 .nav-container {
