@@ -247,49 +247,24 @@
   <a href="https://wa.me/918923736292" class="whatsapp-float" target="_blank">💬 WhatsApp</a>
   <a href="tel:+918923736292" class="call-float">📞 Call Now</a>
 
- <!-- SCROLL REVEAL -->
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  }, { threshold: 0.2 });
+  <!-- SCROLL REVEAL -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
 
-  document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
-</script>
-
-<!-- HEADER SCROLL EFFECT -->
-<script>
+    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+  </script>
+  <script>
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".header");
     header.classList.toggle("scrolled", window.scrollY > 50);
   });
 </script>
-
-<!-- 🔥 FINAL NAV SCROLL FIX -->
-<script>
-  document.querySelectorAll('.nav-menu a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-
-      const targetId = this.getAttribute('href');
-      const target = document.querySelector(targetId);
-
-      const headerOffset = 90;
-      const elementPosition = target.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    });
-  });
-</script>
-
-<!-- FAQ SCHEMA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -339,4 +314,5 @@
 }
 </script>
 
- 
+</body>
+</html>
