@@ -18,7 +18,7 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER (FINAL) */
+/* HEADER */
 .header {
   position: sticky;
   top: 0;
@@ -29,14 +29,36 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.3s ease;
 }
+
 .header.scrolled {
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(12px);
 }
+
 .logo {
   max-width: 160px;
+}
+
+/* NAV */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
   margin: auto;
-  display: block;
+  padding: 0 20px;
+}
+
+.nav-menu a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);
 }
 
 /* HERO */
@@ -69,7 +91,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: 0.3s;
 }
 
 .btn:hover {
@@ -77,28 +99,16 @@ body {
   box-shadow: 0 15px 35px rgba(34,197,94,0.5);
 }
 
-/* SCROLL REVEAL */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* SECTIONS */
 .about, .services, .case-studies, .contact {
   padding: 60px 20px;
 }
 
+/* ABOUT BG ONLY ONCE */
 .about {
   background:
     linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
     url("background.jpg") center / cover no-repeat;
-}
 }
 
 h2 {
@@ -114,7 +124,7 @@ h2 {
   margin: 12px auto;
   width: 300px;
   border-radius: 10px;
-  transition: transform 0.3s;
+  transition: 0.3s;
 }
 
 .service-box:hover {
@@ -130,190 +140,10 @@ h2 {
   border-radius: 10px;
 }
 
-.case-image {
-  width: 100%;
-  margin-top: 20px;
-  border-radius: 10px;
-}
-
-/* FORM */
-.lead-form {
-  padding: 80px 20px;
-  background: linear-gradient(180deg, #000, #0b0b0b);
-}
-
-.form-card {
-  max-width: 420px;
-  margin: auto;
-  background: #0b0b0b;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
-}
-
-.form-subtext {
-  color: #bbb;
-  margin-bottom: 20px;
-}
-
-.form-card input {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 12px;
-  border-radius: 8px;
-  border: none;
-}
-
-.form-card button {
-  width: 100%;
-  padding: 14px;
-  background: var(--primary-color);
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.trust-text {
-  font-size: 13px;
-  color: #aaa;
-  margin-top: 12px;
-}
-
-/* CONTACT */
-.call-btn {
-  background: var(--primary-color);
-  padding: 14px 26px;
-  border-radius: 30px;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
-
-/* FOOTER */
-.footer {
-  padding: 15px;
-  color: #777;
-}
-
-/* FLOATING BUTTONS */
-.whatsapp-float, .call-float {
-  position: fixed;
-  bottom: 20px;
-  padding: 14px 18px;
-  border-radius: 40px;
-  font-weight: bold;
-  text-decoration: none;
-  z-index: 999;
-}
-
-.whatsapp-float {
-  position: fixed;
-  left: 20px;
-  bottom: 80px; /* 👈 upar shift kiya */
-  background: #25D366;
-  color: #000;
-}
-
-.call-float {
-  position: fixed;
-  right: 20px;
-  bottom: 20px; /* 👈 neeche rakha */
-  background: var(--primary-color);
-  color: #000;
-}
-/* =========================
-   WHY INSTANTADS
-========================= */
-.why-us {
-  padding: 70px 20px;
-  background: #000;
-}
-
-.why-us h2 {
-  color: var(--primary-color);
-  margin-bottom: 20px;
-}
-
-.why-intro {
-  max-width: 720px;
-  margin: 0 auto 40px;
-  color: #ccc;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.why-grid {
-  display: flex;
-  gap: 30px;
-  max-width: 900px;
-  margin: auto;
-  flex-wrap: wrap;
-}
-
-.why-box {
-  background: #0b0b0b;
-  border: 1px solid #222;
-  padding: 25px;
-  border-radius: 12px;
-  flex: 1;
-  min-width: 280px;
-  text-align: left;
-}
-
-.why-box h3 {
-  color: var(--primary-color);
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-.why-box ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.why-box li {
-  margin-bottom: 10px;
-  color: #ddd;
-  position: relative;
-  padding-left: 18px;
-}
-
-.why-box li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: var(--primary-color);
-  font-size: 14px;
-}
-/* =========================
-   TESTIMONIALS
-========================= */
+/* TESTIMONIALS */
 .testimonials {
   padding: 70px 20px;
-  background:
-    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
-    url("background.jpg") center / cover no-repeat;
-}
-
-.testimonial-box {
-  position: relative;
-  padding-top: 60px;
-}
-
-.client-logo {
-  position: absolute;
-  top: -20px;
-  left: 20px;
-  width: 80px;
-  height: auto;
-  background: #000;
-  padding: 6px 10px;
-  border-radius: 6px;
-}
-.testimonials h2 {
-  color: var(--primary-color);
-  margin-bottom: 40px;
+  background: #0b0b0b;
 }
 
 .testimonial-grid {
@@ -325,93 +155,28 @@ h2 {
 }
 
 .testimonial-box {
+  position: relative;
   background: #000;
   border: 1px solid #222;
   padding: 30px;
+  padding-top: 60px;
   border-radius: 14px;
   flex: 1;
   min-width: 280px;
   text-align: left;
 }
 
-.testimonial-text {
-  color: #ddd;
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.testimonial-text::before {
-  content: "“";
-  font-size: 40px;
-  color: var(--primary-color);
-  position: absolute;
-  left: -12px;
-  top: -10px;
-}
-
-.testimonial-author {
-  color: var(--primary-color);
-  font-size: 14px;
-  font-weight: bold;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .testimonial-grid {
-    flex-direction: column;
-  }
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .why-grid {
-    flex-direction: column;
-  }
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 26px;
-  }
-
-  .service-box {
-    width: 90%;
-  }
-}
-/* =========================
-   FAQ STYLING IMPROVEMENT
-========================= */
-
-.about h2 {
-  margin-bottom: 25px;
-}
-
-/* Question */
-.about p strong {
-  display: block;
-  color: var(--primary-color);
-  font-size: 16px;
-  margin-bottom: 6px;
-}
-
-/* Answer */
-.about p {
-  margin-bottom: 20px;
-  color: #ccc;
-  line-height: 1.7;
-}
 .client-logo {
-  width: 90px;
-  height: auto;
-  margin-bottom: 15px;
-  object-fit: contain;
-  transition: all 0.3s ease;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 80px;
+  background: #000;
+  padding: 6px;
+  border-radius: 6px;
 }
 
-/* Desktop hover effect */
+/* LOGO HOVER */
 @media (hover: hover) {
   .client-logo {
     filter: grayscale(100%);
@@ -424,23 +189,96 @@ h2 {
     transform: scale(1.05);
   }
 }
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1000px;
-  margin: auto;
-  padding: 0 20px;
+
+.testimonial-text {
+  color: #ddd;
+  margin-bottom: 20px;
 }
 
-.nav-menu a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-  font-size: 13px;
-  transition: color 0.3s;
-}
-
-.nav-menu a:hover {
+.testimonial-author {
   color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* FORM */
+.lead-form {
+  padding: 80px 20px;
+}
+
+.form-card {
+  max-width: 420px;
+  margin: auto;
+  background: #0b0b0b;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+/* CONTACT */
+.call-btn {
+  background: var(--primary-color);
+  padding: 14px 26px;
+  border-radius: 30px;
+  color: #000;
+  text-decoration: none;
+}
+
+/* FOOTER */
+.footer {
+  padding: 40px 15px 120px;
+  color: #777;
+  font-size: 14px;
+}
+
+/* FLOATING BUTTONS (FINAL FIXED) */
+.whatsapp-float,
+.call-float {
+  position: fixed;
+  bottom: 20px;
+  padding: 14px 18px;
+  border-radius: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 999;
+}
+
+/* LEFT */
+.whatsapp-float {
+  left: 20px;
+  background: #25D366;
+  color: #000;
+}
+
+/* RIGHT */
+.call-float {
+  right: 20px;
+  background: var(--primary-color);
+  color: #000;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+  .testimonial-grid {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .service-box {
+    width: 90%;
+  }
+
+  .whatsapp-float {
+    left: 10px;
+    bottom: 80px;
+    padding: 12px 16px;
+  }
+
+  .call-float {
+    right: 10px;
+    bottom: 20px;
+    padding: 12px 16px;
+  }
 }
