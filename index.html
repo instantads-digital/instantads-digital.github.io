@@ -259,6 +259,12 @@
 
     document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
   </script>
+  <script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header");
+    header.classList.toggle("scrolled", window.scrollY > 50);
+  });
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
