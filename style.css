@@ -198,13 +198,17 @@ h2 {
 }
 
 .whatsapp-float {
+  position: fixed;
   left: 20px;
+  bottom: 80px; /* 👈 upar shift kiya */
   background: #25D366;
   color: #000;
 }
 
 .call-float {
+  position: fixed;
   right: 20px;
+  bottom: 20px; /* 👈 neeche rakha */
   background: var(--primary-color);
   color: #000;
 }
