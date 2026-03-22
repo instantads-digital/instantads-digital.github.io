@@ -242,6 +242,25 @@ h2 {
     flex-direction: column;
   }
 
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-menu {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-menu a {
+    margin: 5px 10px;
+    font-size: 12px;
+  }
+
+  .logo {
+    max-width: 110px;
+  }
+
   .whatsapp-float {
     bottom: 80px;
     left: 10px;
