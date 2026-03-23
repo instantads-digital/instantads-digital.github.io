@@ -116,7 +116,18 @@ h2 {
 .why-us h3 { color: var(--secondary-color); }
 
 /* ABOUT */
-.about { max-width: 900px; margin: auto; color: #ccc; }
+.about {
+  max-width: 900px;
+  margin: auto;
+  color: #ccc;
+  padding: 40px 20px;
+  border-radius: 12px;
+
+  /* Background image with overlay */
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
+              url("about-bg.jpg") center / cover no-repeat;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
 
 /* WHY */
 .why-us { text-align: center; }
