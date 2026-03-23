@@ -525,3 +525,49 @@ opacity: 1;
   margin-bottom: 10px;
   color: #aaa;
 }
+
+/* DESKTOP OPTIMIZATION */
+@media (min-width: 1024px) {
+  /* Services grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .service-box {
+    width: 100%;
+    min-height: 220px;
+  }
+
+  /* Testimonials grid */
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  /* Case study box */
+  .case-box {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+  }
+
+  /* Form card */
+  .form-card {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+  }
+
+  /* Section text readability */
+  section p, section ul, section h3 {
+    max-width: 850px;
+    line-height: 1.7;
+  }
+}
