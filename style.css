@@ -125,8 +125,17 @@ h2 {
 
   /* Background image with overlay */
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
-              url("about-bg.jpg") center / cover no-repeat;
+              url("./about-bg.jpg") center / cover no-repeat fixed;
+  background-position: top center; /* keeps your face visible on desktop */
   box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+/* Responsive tweak for mobile */
+@media (max-width: 768px) {
+  .about {
+    background-position: center; /* perfect fit for mobile */
+    background-attachment: scroll; /* disables parallax on mobile for performance */
+  }
 }
 
 /* WHY */
