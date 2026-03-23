@@ -562,9 +562,33 @@ opacity: 1;
     max-width: 1200px;
     margin: auto;
   }
+
+  /* Service card icons */
+.service-box:nth-child(1)::before {
+  content: "🎯";
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
+.service-box:nth-child(2)::before {
+  content: "📈";
+  font-size: 28px;
+  margin-bottom: 10px;
+}
 
+.service-box:nth-child(3)::before {
+  content: "📱";
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.service-box:nth-child(4)::before {
+  content: "🔍";
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+}
   .service-box {
     width: 100%;
     min-height: 220px;
