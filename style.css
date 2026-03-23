@@ -27,7 +27,7 @@ body {
 
 /* HEADER */
 .header {
-  position: fixed;   /* changed from sticky */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -122,6 +122,9 @@ body {
   box-shadow: 0 10px 25px rgba(34,197,94,0.2);
 }
 
+/* CASE */
+.case-box img { width: 100%; height: auto; border-radius: 8px; }
+
 /* FORM */
 .form-card button {
   width: 100%;
@@ -164,4 +167,14 @@ body {
 .popup-overlay.show .popup-box {
   transform: scale(1);
   opacity: 1;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .nav-container { flex-direction: column; align-items: center; gap: 6px; }
+  .logo { max-width: 100px; }
+  .nav-menu { justify-content: center; flex-wrap: wrap; max-width: 100%; }
+  .nav-menu a { font-size: 11px; margin: 4px 6px; }
+  .hero h1 { font-size: 24px; }
+  .testimonial-grid { flex-direction: column; }
 }
