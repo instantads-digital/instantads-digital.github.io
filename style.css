@@ -117,17 +117,17 @@ h2 {
 
 /* ABOUT */
 .about {
-  max-width: 1200px; /* wider for desktop */
+  max-width: 1200px;
   margin: auto;
   color: #ccc;
-  padding: 80px 40px; /* more breathing room */
+  padding: 80px 40px;
   border-radius: 12px;
 
   /* Background image with overlay */
   background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
-              url("./about-bg.jpg") center top / contain no-repeat fixed;
-  min-height: 100vh; /* ensures full image shows */
-  background-color: #000; /* fills any gaps elegantly */
+              url("./about-bg.jpg") center / cover no-repeat fixed;
+  background-position: center top; /* keeps your face visible */
+  min-height: 100vh; /* full viewport height */
   box-shadow: 0 12px 40px rgba(0,0,0,0.5);
 }
 
@@ -138,7 +138,7 @@ h2 {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
                 url("./about-bg.jpg") center / cover no-repeat;
     background-attachment: scroll; /* disables parallax on mobile */
-    min-height: auto; /* natural fit */
+    min-height: auto;
   }
 }
 
