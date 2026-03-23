@@ -80,8 +80,14 @@ body {
   
 .hero h1 { font-size: 34px; }  
 .hero span { color: var(--primary-color); }  
-.hero p { margin: 15px 0; color: #ccc; }  
-  
+.hero p {
+  margin: 15px auto;   /* center horizontally */
+  color: #ccc;
+  max-width: 700px;    /* limit width on desktop */
+  font-size: 18px;     /* slightly larger for readability */
+  line-height: 1.5;
+}
+
 .btn {  
   background: var(--primary-color);  
   padding: 12px 26px;  
