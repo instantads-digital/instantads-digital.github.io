@@ -143,23 +143,50 @@ h2 {
               url("background.jpg") center / cover no-repeat;
 }
 
+/* Service card styling */
 .service-box {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  padding: 25px;
+  text-align: center;
   transition: 0.3s;
   cursor: pointer;
-  opacity: 0;
+  opacity: 0; /* for stagger animation */
   transform: translateY(20px);
+  min-height: 240px; /* consistent height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+.service-box i {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.service-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.service-box p {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Hover effect */
 .service-box:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 12px 40px rgba(34,197,94,0.25);
   border-color: var(--primary-color);
-}
+
+  
 
 /* CASE */
 .case-box {
@@ -526,16 +553,17 @@ opacity: 1;
   color: #aaa;
 }
 
-/* DESKTOP OPTIMIZATION */
+/* Desktop grid optimization */
 @media (min-width: 1024px) {
-  /* Services grid */
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
     gap: 30px;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
   }
+}
+
 
   .service-box {
     width: 100%;
