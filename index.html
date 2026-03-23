@@ -1,370 +1,177 @@
-:root { 
-  --primary-color: #22c55e; 
-  --secondary-color: #16a34a; /* NEW: heading highlight */ 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8" /> 
+<link rel="icon" type="image/png" href="favicon.png"> 
+<!-- PRIMARY SEO --> 
+<title>InstantAds | Lead Generation Agency for Google Ads & SEO</title> 
+<meta name="description" content="InstantAds is a lead generation agency helping 
+service-based businesses grow using Google Ads, Meta Ads, and SEO. Get predictable, 
+high-quality leads."> 
+<meta name="keywords" content="lead generation agency, google ads lead generation, seo 
+for service businesses, meta ads agency, digital marketing agency"> 
+<meta name="author" content="InstantAds"> 
+<!-- RESPONSIVE --> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<!-- SOCIAL PREVIEW --> 
+<meta property="og:title" content="InstantAds | Lead Generation Agency"> 
+<meta property="og:description" content="Google Ads & SEO that turns clicks into predictable 
+leads."> 
+<meta property="og:type" content="website"> 
+<meta property="og:url" content="https://instantads-digital.github.io"> 
+<!-- STYLES --> 
+<link rel="stylesheet" href="style.css?v=4"> 
+<!-- ICONS --> 
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+</head> 
+<body> 
+<!-- HEADER --> 
+<header class="header fade-in"> 
+<div class="nav-container"> 
+<img src="logo.png" class="logo"> 
+<nav class="nav-menu"> 
+<a href="#home">Home</a> 
+<a href="#services">Services</a> 
+<a href="#case">Case Study</a> 
+<a href="#contact">Contact</a> 
+</nav> 
+</div> 
+</header> 
+<!-- HERO --> 
+<section class="hero" id="home"> 
+<h1>Turn Ad Spend into <span>Predictable Leads</span></h1> 
+<p>Google Ads & SEO That Converts Clicks Into Customers</p> 
+<a href="https://wa.me/918923736292" target="_blank" class="btn">Get Free Ads Audit</a> 
+</section> 
+<!-- ABOUT --> 
+<section class="about fade-in"> 
+<h2>About Our Lead Generation Agency</h2> 
+<p>InstantAds is a performance-driven lead generation agency focused on helping 
+service-based businesses grow using Google Ads, Meta Ads, and SEO. 
+We specialize in high-intent traffic, conversion optimization, and scalable 
+growth strategies that produce measurable results.</p> 
+</section> 
+<!-- SERVICES --> 
+<section class="services fade-in" id="services"> 
+<h2>Lead Generation & Digital Marketing Services</h2> 
+<div class="service-box">Lead Generation Campaigns</div> 
+<div class="service-box">Google Ads Management</div> 
+<div class="service-box">Meta Ads (Facebook & Instagram)</div> 
+<div class="service-box">SEO & Organic Growth</div> 
+</section> 
+<!-- CASE STUDY --> 
+<section class="case-studies fade-in" id="case"> 
+<h2>Google Ads Case Study - Real Lead Generation Results</h2> 
+<div class="case-box"> 
+<h3>Local Service Business - Canada</h3> 
+<p>Generated <strong>1,000+ qualified clicks</strong> and 
+<strong>140+ conversions</strong> in 30 days using Google Ads. 
+Achieved an average <strong>cost per lead of ~$18</strong>.</p> 
+<img src="google-ads-result.png" class="case-image" alt="Google Ads lead generation 
+results"> 
+<p class="case-note">*Client name and sensitive data hidden for privacy*</p> 
+</div> 
+</section> 
+<!-- TESTIMONIALS --> 
+<section class="testimonials fade-in"> 
+<h2>What Our Clients Say</h2> 
+<div class="testimonial-grid"> 
+<div class="testimonial-box"> 
+<img src="client1-logo.png" alt="Client Logo" class="client-logo"> 
+<p class="testimonial-text">"We started receiving consistent, genuine enquiries within a few 
+weeks. 
+The focus was always on quality leads and clear communication."</p> 
+<p class="testimonial-author">Notary & Certified Translation Service, Canada</p> 
+</div> 
+<div class="testimonial-box"> 
+<img src="client2-logo.png" alt="Client Logo" class="client-logo"> 
+<p class="testimonial-text">"The campaigns brought in relevant project enquiries rather than 
+generic leads. 
+We finally saw marketing aligned with real business opportunities."</p> 
+<p class="testimonial-author">- Engineering Services Business, USA</p> 
+</div> 
+</div> 
+</section> 
+<!-- WHY INSTANTADS --> 
+<section class="why-us fade-in"> 
+<h2>Why InstantAds</h2> 
+<p class="why-intro">InstantAds is built to support service-based businesses at different stages 
+of growth. 
+Whether you're just starting out or looking to scale, we focus on 
+<strong>practical strategies that drive real business outcomes</strong>.</p> 
+</section> 
+<!-- LEAD FORM --> 
+<section class="lead-form fade-in"> 
+<div class="form-card"> 
+<h2>Get Free Strategy Call</h2> 
+<p class="form-subtext">No contracts. No obligation. We'll review your ads & growth 
+potential.</p> 
+<form action="https://formsubmit.co/instantads0@gmail.com" method="POST"> 
+<input type="text" name="name" placeholder="Your Name" required> 
+<input type="tel" name="phone" placeholder="Your Phone Number" required> 
+<input type="email" name="email" placeholder="Your Email Address" required> 
+<input type="text" name="business" placeholder="Your Business Type (Optional)"> 
+<input type="hidden" name="_subject" value="New Lead from InstantAds Website"> 
+<input type="hidden" name="_captcha" value="false"> 
+<input type="hidden" name="_next" value="https://instantads-digital.github.io/thank-you.html"> 
+<button type="submit">Get Free Audit</button> 
+</form> 
+<p class="trust-text"><i class="fa-solid fa-lock"></i> We never spam. Your details are safe.</p> 
+</div> 
+</section> 
+ 
+<!-- CONTACT --> 
+<section class="contact fade-in" id="contact"> 
+<h2>Contact InstantAds</h2> 
+<div class="contact-box"> 
+<a href="tel:+918923736292" class="call-btn"><i class="fa-solid fa-phone"></i> Call Us: +91 
+8923736292</a> 
+<p><i class="fa-solid fa-envelope"></i> instantads0@gmail.com</p> 
+</div> 
+</section> 
+ 
+<footer class="footer"> 
+@ 2026 InstantAds. All Rights Reserved. 
+<p style="margin-top:10px; font-size:12px; color:#555;">Trusted by service businesses in USA 
+& Canada</p> 
+</footer> 
+ 
+<!-- FLOATING BUTTONS --> 
+<a href="https://wa.me/918923736292" class="whatsapp-float" target="_blank"><i 
+class="fa-brands fa-whatsapp"></i> WhatsApp</a> 
+<a href="tel:+918923736292" class="call-float"><i class="fa-solid fa-phone"></i> Call Now</a> 
+ 
+<!-- POPUP FORM --> 
+<div id="popupForm" class="popup-overlay"> 
+  <div class="popup-box"> 
+    <span class="close-btn" onclick="closePopup()">×</span> 
+    <h2>Get Free Strategy Call</h2> 
+    <p>No contracts. No obligation. We’ll review your ads & growth potential.</p> 
+    <form action="https://formsubmit.co/instantads0@gmail.com" method="POST"> 
+      <input type="text" name="name" placeholder="Your Name" required> 
+      <input type="tel" name="phone" placeholder="Your Phone Number" required> 
+      <input type="email" name="email" placeholder="Your Email Address" required> 
+      <input type="text" name="business" placeholder="Your Business Type (Optional)"> 
+      <input type="hidden" name="_subject" value="New Lead from Popup"> 
+      <input type="hidden" name="_captcha" value="false"> 
+      <button type="submit">Get Free Audit</button> 
+    </form> 
+    <p class="trust-text"><i class="fa-solid fa-lock"></i> We never spam. Your details are 
+safe.</p> 
+  </div> 
+</div> 
+<!-- POPUP JAVASCRIPT --> 
+<script> 
+function closePopup() { 
+document.getElementById("popupForm").classList.remove("show"); 
+localStorage.setItem("popupShown", "true"); 
 } 
- 
-/* RESET */ 
-* { 
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
-  font-family: Arial, sans-serif; 
+setTimeout(() => { 
+if (!localStorage.getItem("popupShown")) { 
+document.getElementById("popupForm").classList.add("show"); 
 } 
- 
-/* CRITICAL FIX: PREVENT ZOOM / OVERFLOW */ 
-html, body { 
-  overflow-x: hidden; 
-  width: 100%; 
-  scroll-behavior: smooth; /* FIX */ 
-  scroll-padding-top: 80px; /* FIX (sticky nav offset) */ 
-} 
- 
-body { 
-  background: #000; 
-  color: #fff; 
-  line-height: 1.6; 
-} 
- 
-/* HEADER */ 
-.header { 
-  position: sticky; 
-  top: 0; 
-  z-index: 1000; 
-  background: rgba(0,0,0,0.9); 
-  backdrop-filter: blur(8px); 
-  padding: 10px 0; 
-  border-bottom: 1px solid rgba(255,255,255,0.08); 
-} 
- 
-/* NAV */ 
-.nav-container { 
-  max-width: 1100px; 
-  margin: auto; 
-  padding: 0 20px; 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-} 
- 
-.logo { 
-  max-width: 130px; 
-  height: auto; 
-  display: block; 
-} 
- 
-.nav-menu { 
-  display: flex; 
-  align-items: center; 
-  flex-wrap: wrap; 
-} 
- 
-.nav-menu a { 
-  margin-left: 20px; 
-  color: #fff; 
-  text-decoration: none; 
-  font-size: 14px; 
-  white-space: nowrap; 
-} 
- 
-.nav-menu a:hover { 
-  color: var(--primary-color); 
-} 
- 
-/* HERO */ 
-.hero { 
-  padding: 80px 20px; 
-  text-align: center; 
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), 
-              url("hero-bg.jpg") center / cover no-repeat; 
-} 
- 
-.hero h1 { font-size: 34px; } 
-.hero span { color: var(--primary-color); } 
-.hero p { margin: 15px 0; color: #ccc; } 
- 
-.btn { 
-  background: var(--primary-color); 
-  padding: 12px 26px; 
-  border-radius: 30px; 
-  color: #000; 
-  text-decoration: none; 
-  font-weight: bold; 
-} 
- 
-/* SECTIONS */ 
-section { 
-  padding: 60px 20px; 
-  text-align: center; 
-  width: 100%; 
-  overflow: hidden; 
-  scroll-margin-top: 90px; 
-} 
- 
-section p, 
-section ul, 
-section h3 { 
-  max-width: 750px; 
-  margin-left: auto; 
-  margin-right: auto; 
-} 
- 
-h2 { 
-  color: var(--primary-color); 
-  margin-bottom: 20px; 
-} 
- 
-/* FIX: SUB HEADINGS COLOR */ 
-.why-us h3 { 
-  color: var(--secondary-color); 
-} 
- 
-/* ABOUT */ 
-.about { 
-  max-width: 900px; 
-  margin: auto; 
-  color: #ccc; 
-} 
- 
-/* WHY */ 
-.why-us { 
-  text-align: center; 
-} 
- 
-.why-us p { 
-  max-width: 750px; 
-  margin: auto; 
-} 
- 
-.why-box { 
-  max-width: 500px; 
-  margin: 20px auto; 
-} 
- 
-/* SERVICES with background image */ 
-.services { 
-  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
-              url("background.jpg") center / cover no-repeat; 
-} 
- 
-.service-box { 
-  background: #0b0b0b; 
-  border: 1px solid #222; 
-  padding: 15px; 
-  margin: 10px auto; 
-  max-width: 300px; 
-  border-radius: 8px; 
-} 
- 
-/* CASE */ 
-.case-box { 
-  max-width: 700px; 
-  margin: auto; 
-  background: #0b0b0b; 
-  padding: 20px; 
-  border-radius: 10px; 
-} 
- 
-/* FIX: CASE IMAGE FULL WIDTH */ 
-.case-box img { 
-  width: 100%; 
-  height: auto; 
-  border-radius: 8px; 
-} 
- 
-/* TESTIMONIALS */ 
-.testimonials { 
-  background: #0b0b0b; 
-} 
- 
-.testimonial-grid { 
-  display: flex; 
-  gap: 20px; 
-  max-width: 900px; 
-  margin: auto; 
-  flex-wrap: wrap; 
-} 
- 
-.testimonial-box { 
-  flex: 1; 
-  min-width: 280px; 
-  background: #000; 
-  border: 1px solid #222; 
-  padding: 20px; 
-  border-radius: 10px; 
-  text-align: left; 
-} 
- 
-.client-logo { 
-  width: 80px; 
-  margin-bottom: 10px; 
-} 
- 
-/* FORM */ 
-.form-card { 
-  max-width: 420px; 
-  margin: auto; 
-  background: #0b0b0b; 
-  padding: 25px; 
-  border-radius: 10px; 
-} 
- 
-.form-card input { 
-  width: 100%; 
-  margin-bottom: 10px; 
-  padding: 12px; 
-  border-radius: 6px; 
-  border: none; 
-} 
- 
-.form-card button { 
-  width: 100%; 
-  padding: 12px; 
-  border-radius: 25px; 
-  border: none; 
-  background: var(--primary-color); 
-  font-weight: bold; 
-} 
- 
-/* CONTACT */ 
-.call-btn { 
-  display: inline-block; 
-  margin: 10px 0; 
-  background: var(--primary-color); 
-  padding: 12px 25px; 
-  border-radius: 30px; 
-  color: #000; 
-  text-decoration: none; 
-} 
- 
-/* FOOTER */ 
-.footer { 
-  padding: 40px 15px 100px; 
-  color: #777; 
-  font-size: 14px; 
-  text-align: center; 
-} 
- 
-/* FLOAT BUTTONS */ 
-.whatsapp-float, 
-.call-float { 
-  position: fixed; 
-  bottom: 15px; 
-  padding: 12px 16px; 
-  border-radius: 40px; 
-  font-weight: bold; 
-  z-index: 999; 
-} 
- 
-/* LEFT */ 
-.whatsapp-float { 
-  left: 10px; 
-  background: #25D366; 
-  color: #000; 
-} 
- 
-/* RIGHT */ 
-.call-float { 
-  right: 10px; 
-  background: var(--primary-color); 
-  color: #000; 
-} 
- 
-/* MOBILE FIX */ 
-@media (max-width: 768px) { 
-  .nav-container { 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 6px; 
-  } 
- 
-  .logo { max-width: 100px; } 
- 
-  .nav-menu { 
-    justify-content: center; 
-    flex-wrap: wrap; 
-    max-width: 100%; 
-  } 
- 
-  .nav-menu a { 
-    font-size: 11px; 
-    margin: 4px 6px; 
-  } 
- 
-  .hero h1 { font-size: 24px; } 
- 
-  .testimonial-grid { flex-direction: column; } 
- 
-  .whatsapp-float, 
-  .call-float { bottom: 15px; } 
- 
-  /* FORCE OFFSET FOR ANCHOR LINKS */ 
-  #home, 
-  #services, 
-  #case, 
-  #contact { 
-    scroll-margin-top: 100px; 
-  } 
- 
-  #home::before, 
-  #services::before, 
-  #case::before, 
-  #contact::before { 
-    content: ""; 
-    display: block; 
-    height: 90px; /* header height */ 
-    margin-top: -90px; 
-  } 
-} 
- 
-/* POPUP */ 
-.popup-overlay { 
-  position: fixed; 
-  top: 0; left: 0; 
-  width: 100%; height: 100%; 
-  background: rgba(0,0,0,0.8); 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  visibility: hidden; 
-  opacity: 0; 
-  transition: 0.3s; 
-  z-index: 2000; 
-} 
- 
-.popup-box { 
-  background: #0b0b0b; 
-  padding: 25px; 
-  border-radius: 12px; 
-  width: 90%; 
-  max-width: 400px; 
-  text-align: center; 
-  position: relative; 
-} 
- 
-.popup-box input { 
-  width: 100%; 
-  margin-bottom: 10px; 
-  padding: 12px; 
-  border-radius: 6px; 
-  border: none; 
-} 
- 
-.popup-box button { 
-width: 100%; 
-padding: 12px; 
-border-radius: 25px; 
-border: none; 
-background: var(--primary-color); 
-font-weight: bold; 
-} 
-.close-btn { 
-position: absolute; 
-right: 15px; 
-top: 10px; 
-font-size: 22px; 
-cursor: pointer; 
-} 
-.popup-overlay.show { 
-visibility: visible; 
-opacity: 1; 
-} 
+}, 8000); 
+</script> 
+</body> 
+</html> 
