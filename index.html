@@ -286,5 +286,23 @@ boxes.forEach((box, index) => {
   });
 </script>
 
+  <script>
+  const aboutSection = document.querySelector('.about');
+  const aboutHeading = aboutSection.querySelector('h2');
+  const aboutParagraph = aboutSection.querySelector('p');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        aboutHeading.classList.add('visible');
+        setTimeout(() => {
+          aboutParagraph.classList.add('visible');
+        }, 300);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(aboutSection);
+</script>
 </body>
 </html>
