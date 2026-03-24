@@ -266,6 +266,26 @@ h2 {
     font-size: 12px;
     line-height: 1.3;
   }
+
+  /* Scroll indicators (dots) */
+  .scroll-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 6px;
+  }
+
+  .scroll-indicators span {
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+  }
+
+  .scroll-indicators span.active {
+    background: var(--primary-color);
+  }
 }
 
 /* Extra small screens */
