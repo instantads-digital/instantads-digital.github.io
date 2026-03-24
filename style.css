@@ -158,6 +158,27 @@ h2 {
 }
 
 /* Service cards */
+.services {
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+              url("background.jpg") center / cover no-repeat;
+  background-attachment: fixed;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  color: var(--primary-color);
+  font-size: 28px;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(34,197,94,0.4);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
 .service-box {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12px);
@@ -170,10 +191,18 @@ h2 {
   cursor: pointer;
   opacity: 0;
   transform: translateY(20px);
-  min-height: 240px;
+  min-height: 320px; /* taller to fit image */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+.service-box img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
 }
 
 .service-box i {
