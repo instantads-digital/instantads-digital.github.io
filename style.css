@@ -117,33 +117,47 @@ h2 {
 
 /* ABOUT */
 .about {
-  max-width: 1200px;
-  margin: auto;
-  color: #ccc;
-  padding: 100px 60px; /* more content density */
-  border-radius: 12px;
-
-  /* Background image with overlay */
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
-              url("./about-bg.jpg") center top / cover no-repeat fixed;
-  background-position: center top;
-  min-height: 80vh; /* slightly less than full screen */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centers text vertically */
-  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  position: relative; /* allow overlay positioning */
+  background: url("about-bg.jpg") center center / cover no-repeat;
+  background-attachment: fixed; /* optional parallax effect */
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
 }
 
-/* Responsive tweak for mobile */
-@media (max-width: 768px) {
-  .about {
-    padding: 40px 20px;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
-                url("./about-bg.jpg") center / cover no-repeat;
-    background-attachment: scroll;
-    min-height: auto;
-    display: block;
-  }
+/* Gradient overlay */
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* covers entire section */
+  background: linear-gradient(
+    rgba(0,0,0,0.7),   /* darker at top */
+    rgba(0,0,0,0.4),   /* medium in middle */
+    rgba(0,0,0,0.2)    /* lighter at bottom */
+  );
+  z-index: 1;
+}
+
+/* Content above overlay */
+.about h2,
+.about p {
+  position: relative;
+  z-index: 2;
+}
+
+.about h2 {
+  color: var(--primary-color);
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(34,197,94,0.4);
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
 }
 /* WHY */
 .why-us { text-align: center; }
