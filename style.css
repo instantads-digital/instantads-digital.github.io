@@ -226,31 +226,43 @@ h2 {
 
 /* Mobile optimization */
 @media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 15px; /* tighter spacing between cards */
+  }
+
   .service-box {
     min-height: auto;
-    padding: 15px; /* tighter padding */
+    padding: 12px; /* tighter padding */
   }
 
   .service-box img {
-    height: 100px; /* smaller image */
-    margin-bottom: 8px;
-  }
-
-  .service-box h3 {
-    font-size: 16px;
+    height: 90px; /* smaller image */
     margin-bottom: 6px;
   }
 
-  .service-box p {
-    font-size: 13px;
-    line-height: 1.3;
+  .service-box i {
+    font-size: 24px; /* reduced icon size */
+    margin-bottom: 6px;
   }
 
-  .service-grid {
-    gap: 15px; /* tighter spacing between cards */
+  .service-box h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .service-box p {
+    font-size: 12px;
+    line-height: 1.3;
   }
 }
 
+/* Extra small screens */
+@media (max-width: 480px) {
+  .service-grid {
+    grid-template-columns: 1fr; /* single card per row */
+  }
+}
 
 /* CASE */
 .case-box {
