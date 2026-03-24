@@ -155,13 +155,6 @@ h2 {
   background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
               url("background.jpg") center / cover no-repeat;
   background-attachment: fixed;
-}
-
-/* Service cards */
-.services {
-  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-              url("background.jpg") center / cover no-repeat;
-  background-attachment: fixed;
   padding: 60px 20px;
   text-align: center;
 }
@@ -179,6 +172,7 @@ h2 {
   gap: 30px;
 }
 
+/* Service cards */
 .service-box {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12px);
