@@ -25,8 +25,6 @@ body {
   line-height: 1.6;
 }
 
-
-/* HEADER */ 
 /* HEADER */
 .header {
   position: sticky;
@@ -70,6 +68,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transition: transform 0.3s ease; /* smooth scale on hover */
 }
 
 .logo {
@@ -102,7 +101,10 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Hover glow effect */
+/* Hover glow + logo scale */
+.logo-block:hover {
+  transform: scale(1.05); /* subtle zoom */
+}
 .logo-block:hover .tagline {
   text-shadow: 0 0 8px rgba(34,197,94,0.8);
 }
