@@ -125,10 +125,24 @@ h2 {
 
   /* Background image with overlay */
   background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
-              url("./about-bg.jpg") center / cover no-repeat fixed;
-  background-position: center top; /* keeps your face visible */
-  min-height: 100vh; /* full viewport height */
+              url("./about-bg.jpg") center top / cover no-repeat fixed;
+  background-position: center top;
+  min-height: 70vh; /* reduced height for better balance */
+  display: flex;
+  align-items: center; /* vertically centers content */
   box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+
+/* Responsive tweak for mobile */
+@media (max-width: 768px) {
+  .about {
+    padding: 40px 20px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
+                url("./about-bg.jpg") center / cover no-repeat;
+    background-attachment: scroll;
+    min-height: auto;
+    display: block; /* natural flow on mobile */
+  }
 }
 
 /* Responsive tweak for mobile */
