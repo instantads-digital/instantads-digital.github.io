@@ -118,13 +118,12 @@ h2 {
 /* ABOUT */
 .about {
   position: relative;
-  min-height: 80vh; /* balanced height on desktop */
-  padding: 60px 20px;
+  min-height: auto; /* let content define height */
+  padding: 30px 20px; /* reduced padding */
   text-align: center;
   color: #fff;
   overflow: hidden;
 
-  /* Match Hero style */
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
               url("about-bg.jpg") center / cover no-repeat;
   background-attachment: fixed; /* immersive effect on desktop */
@@ -136,8 +135,8 @@ h2 {
   position: relative;
   z-index: 2;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .about h2.visible,
@@ -149,19 +148,21 @@ h2 {
 /* Mobile fallback */
 @media (max-width: 768px) {
   .about {
-    min-height: auto;           /* no forced full screen height */
-    padding: 40px 20px;         /* tighter spacing */
+    min-height: auto;       /* no forced full screen height */
+    padding: 25px 15px;     /* tighter spacing on mobile */
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
                 url("about-bg.jpg") center / cover no-repeat;
-    background-attachment: scroll; /* scoped only to About section */
+    background-attachment: scroll;
   }
 }
 
 /* Reduce gap between About & Services */
-.about,
+.about {
+  margin-bottom: 20px; /* small controlled gap */
+}
 .services {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  margin-top: 0;       /* remove extra top gap */
+  padding-top: 30px;   /* tighter spacing */
 }
 
 /* WHY */
