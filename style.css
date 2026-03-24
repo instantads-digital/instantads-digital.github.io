@@ -166,12 +166,6 @@ h2 {
   text-shadow: 0 0 10px rgba(34,197,94,0.4);
 }
 
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
 /* Service grid */
 .service-grid {
   display: grid;
