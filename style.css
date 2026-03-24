@@ -25,87 +25,45 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 
-  /* Full background banner */
-  background: url("header-bg.jpg") center / cover no-repeat;
-  background-attachment: fixed; /* immersive effect on desktop */
-
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-/* Overlay for readability */
-.header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6); /* dark overlay */
-  z-index: -1; /* sits behind content */
-}
-
-/* NAV CONTAINER */
-.nav-container {
-  position: relative; /* ensures content sits above overlay */
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1; /* keeps logo + nav above overlay */
-}
-
-.logo {
-  max-width: 130px;
-  height: auto;
-  display: block;
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.nav-menu a {
-  margin-left: 20px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-.nav-menu a:hover {
-  color: var(--primary-color);
-}
-
-/* Mobile optimization */
-@media (max-width: 768px) {
-  .header {
-    background-attachment: scroll; /* avoid fixed issues on mobile */
-    background-position: center;
-  }
-
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .logo {
-    max-width: 100px;
-  }
-
-  .nav-menu a {
-    font-size: 12px;
-    margin: 4px 6px;
-  }
-}
+/* HEADER */ 
+.header { 
+  position: sticky; 
+  top: 0; 
+  z-index: 1000; 
+  background: rgba(0,0,0,0.9); 
+  backdrop-filter: blur(8px); 
+  padding: 10px 0; 
+  border-bottom: 1px solid rgba(255,255,255,0.08); 
+} 
+ 
+/* NAV */ 
+.nav-container { 
+  max-width: 1100px; 
+  margin: auto; 
+  padding: 0 20px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+} 
+ 
+.logo { max-width: 130px; height: auto; display: block; } 
+ 
+.nav-menu { 
+  display: flex; 
+  align-items: center; 
+  flex-wrap: wrap; 
+} 
+ 
+.nav-menu a { 
+  margin-left: 20px; 
+  color: #fff; 
+  text-decoration: none; 
+  font-size: 14px; 
+  white-space: nowrap; 
+} 
+ 
+.nav-menu a:hover { color: var(--primary-color); } 
 
 /* HERO */
 .hero {
