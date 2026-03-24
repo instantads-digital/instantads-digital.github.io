@@ -120,16 +120,17 @@ h2 {
   max-width: 1200px;
   margin: auto;
   color: #ccc;
-  padding: 80px 40px;
+  padding: 100px 60px; /* more content density */
   border-radius: 12px;
 
   /* Background image with overlay */
   background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
               url("./about-bg.jpg") center top / cover no-repeat fixed;
   background-position: center top;
-  min-height: 70vh; /* reduced height for better balance */
+  min-height: 80vh; /* slightly less than full screen */
   display: flex;
-  align-items: center; /* vertically centers content */
+  flex-direction: column;
+  justify-content: center; /* centers text vertically */
   box-shadow: 0 12px 40px rgba(0,0,0,0.5);
 }
 
@@ -141,21 +142,9 @@ h2 {
                 url("./about-bg.jpg") center / cover no-repeat;
     background-attachment: scroll;
     min-height: auto;
-    display: block; /* natural flow on mobile */
+    display: block;
   }
 }
-
-/* Responsive tweak for mobile */
-@media (max-width: 768px) {
-  .about {
-    padding: 40px 20px;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
-                url("./about-bg.jpg") center / cover no-repeat;
-    background-attachment: scroll; /* disables parallax on mobile */
-    min-height: auto;
-  }
-}
-
 /* WHY */
 .why-us { text-align: center; }
 .why-us p { max-width: 750px; margin: auto; }
