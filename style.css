@@ -118,7 +118,7 @@ h2 {
 /* ABOUT */
 .about {
   position: relative;
-  min-height: 100vh; /* full screen height */
+  min-height: 100vh; /* full viewport height on desktop */
   padding: 60px 20px;
   text-align: center;
   color: #fff;
@@ -127,10 +127,10 @@ h2 {
   /* Match Hero style */
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
               url("about-bg.jpg") center / cover no-repeat;
-  background-attachment: fixed; /* desktop immersive effect */
+  background-attachment: fixed; /* immersive effect on desktop */
 }
 
-/* Content above overlay */
+/* Content animation */
 .about h2,
 .about p {
   position: relative;
@@ -149,11 +149,22 @@ h2 {
 /* Mobile fallback */
 @media (max-width: 768px) {
   .about {
+    min-height: auto;           /* prevent giant empty space */
+    padding: 40px 20px;         /* tighter spacing */
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
                 url("about-bg.jpg") center / cover no-repeat;
     background-attachment: scroll; /* scoped only to About section */
   }
 }
+
+/* Desktop optimization */
+@media (min-width: 1024px) {
+  .about {
+    min-height: 80vh; /* slightly smaller so image doesn’t feel oversized */
+    padding: 80px 20px;
+  }
+}
+
 /* WHY */
 .why-us { text-align: center; }
 .why-us p { max-width: 750px; margin: auto; }
