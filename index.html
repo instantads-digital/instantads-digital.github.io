@@ -54,10 +54,10 @@
 </section>
 
 <!-- SERVICES (Premium cards) -->
-<section class="services">
+<section class="services" id="services">
   <h2>Lead Generation & Digital Marketing Services</h2>
+  
   <div class="service-grid">
-
     <div class="service-box">
       <img src="lead-generation.jpg" alt="Lead Generation">
       <i class="fas fa-bullseye"></i>
@@ -85,9 +85,17 @@
       <h3>SEO Growth</h3>
       <p>Rank higher, get discovered, and generate leads consistently without paid ads.</p>
     </div>
+  </div>
 
+  <!-- Scroll indicators -->
+  <div class="scroll-indicators">
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 </section>
+
 <!-- HOW IT WORKS -->
 <section class="process fade-in">
   <h2>How We Generate Leads</h2>
@@ -247,6 +255,35 @@ boxes.forEach((box, index) => {
     box.style.transform = "translateY(0)";
   }, index * 200);
 });
+</script>
+  
+<!-- JS for scroll indicators -->
+<script>
+  const grid = document.querySelector('.service-grid');
+  const indicators = document.querySelectorAll('.scroll-indicators span');
+  const cards = document.querySelectorAll('.service-box');
+
+  // Update active dot on scroll
+  grid.addEventListener('scroll', () => {
+    const scrollLeft = grid.scrollLeft;
+    const cardWidth = cards[0].offsetWidth + 12; // card width + gap
+    const index = Math.round(scrollLeft / cardWidth);
+
+    indicators.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  });
+
+  // Make dots clickable
+  indicators.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      const cardWidth = cards[0].offsetWidth + 12;
+      grid.scrollTo({
+        left: i * cardWidth,
+        behavior: 'smooth'
+      });
+    });
+  });
 </script>
 
 </body>
