@@ -228,12 +228,12 @@ h2 {
 @media (max-width: 768px) {
   .service-grid {
     grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
-    gap: 10px; /* tighter spacing */
+    gap: 8px; /* tighter spacing */
   }
 
   .service-box {
     min-height: auto;
-    padding: 10px; /* smaller padding */
+    padding: 8px; /* smaller padding */
   }
 
   .service-box img {
@@ -242,17 +242,17 @@ h2 {
   }
 
   .service-box i {
-    font-size: 20px; /* reduced icon size */
+    font-size: 18px; /* reduced icon size */
     margin-bottom: 4px;
   }
 
   .service-box h3 {
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 4px;
   }
 
   .service-box p {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.2;
   }
 }
