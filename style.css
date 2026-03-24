@@ -172,6 +172,13 @@ h2 {
   gap: 30px;
 }
 
+/* Service grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
 /* Service cards */
 .service-box {
   background: rgba(255, 255, 255, 0.05);
@@ -184,7 +191,7 @@ h2 {
   cursor: pointer;
   opacity: 0;
   transform: translateY(15px);
-  min-height: 280px; /* reduced height */
+  min-height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -193,14 +200,14 @@ h2 {
 
 .service-box img {
   width: 100%;
-  height: 120px; /* smaller image */
+  height: 120px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
 .service-box i {
-  font-size: 28px; /* slightly smaller */
+  font-size: 28px;
   color: var(--primary-color);
   margin-bottom: 8px;
 }
@@ -228,21 +235,21 @@ h2 {
 @media (max-width: 768px) {
   .service-grid {
     grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
-    gap: 8px; /* tighter spacing */
+    gap: 8px;
   }
 
   .service-box {
     min-height: auto;
-    padding: 8px; /* smaller padding */
+    padding: 8px;
   }
 
   .service-box img {
-    height: 70px; /* smaller image */
+    height: 70px;
     margin-bottom: 6px;
   }
 
   .service-box i {
-    font-size: 18px; /* reduced icon size */
+    font-size: 18px;
     margin-bottom: 4px;
   }
 
