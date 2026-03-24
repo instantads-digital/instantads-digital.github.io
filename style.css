@@ -235,6 +235,11 @@ h2 {
     -webkit-overflow-scrolling: touch;
   }
 
+  /* Hide scrollbar for cleaner look */
+  .service-grid::-webkit-scrollbar {
+    display: none;
+  }
+
   .service-box {
     flex: 0 0 70%;                  /* each card ~70% width */
     min-width: 180px;               /* prevent squishing */
