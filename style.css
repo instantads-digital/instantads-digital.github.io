@@ -118,7 +118,7 @@ h2 {
 /* ABOUT */
 .about {
   position: relative;
-  min-height: 100vh; /* full viewport height on desktop */
+  min-height: 80vh; /* balanced height on desktop */
   padding: 60px 20px;
   text-align: center;
   color: #fff;
@@ -149,7 +149,7 @@ h2 {
 /* Mobile fallback */
 @media (max-width: 768px) {
   .about {
-    min-height: auto;           /* prevent giant empty space */
+    min-height: auto;           /* no forced full screen height */
     padding: 40px 20px;         /* tighter spacing */
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
                 url("about-bg.jpg") center / cover no-repeat;
@@ -157,12 +157,11 @@ h2 {
   }
 }
 
-/* Desktop optimization */
-@media (min-width: 1024px) {
-  .about {
-    min-height: 80vh; /* slightly smaller so image doesn’t feel oversized */
-    padding: 80px 20px;
-  }
+/* Reduce gap between About & Services */
+.about,
+.services {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 /* WHY */
