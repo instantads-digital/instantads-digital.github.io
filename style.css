@@ -166,32 +166,95 @@ body {
   } 
 } 
  
-/* HERO */ 
-.hero { 
-  padding: 80px 20px; 
-  text-align: center; 
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), 
-              url("hero-bg.jpg") center / cover no-repeat; 
-} 
- 
-.hero h1 { font-size: 34px; animation: slideUp 1s ease; } 
-.hero span { color: var(--primary-color); text-shadow: 0 0 10px #22c55e; } 
-.hero p { 
-  margin: 15px auto; 
-  color: #ccc; 
-  max-width: 700px; 
-  font-size: 18px; 
-  line-height: 1.5; 
-} 
- 
-.btn { 
-  background: var(--primary-color); 
-  padding: 12px 26px; 
-  border-radius: 30px; 
-  color: #000; 
-  text-decoration: none; 
-  font-weight: bold; 
-} 
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(180deg, #000 0%, #111 100%);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-container {
+  max-width: 900px;
+  margin: auto;
+  animation: fadeInHero 1.2s ease forwards;
+}
+
+/* Headline */
+.hero-headline {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Sub-headline */
+.hero-subheadline {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Pain points */
+.hero-painpoints p {
+  font-size: 1rem;
+  margin: 8px 0;
+  color: #eee;
+  animation: fadeInPain 1s ease forwards;
+}
+
+.hero-painpoints p:nth-child(1) { animation-delay: 0.3s; }
+.hero-painpoints p:nth-child(2) { animation-delay: 0.6s; }
+.hero-painpoints p:nth-child(3) { animation-delay: 0.9s; }
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(34,197,94,0.6);
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(34,197,94,0.9);
+}
+
+/* CTA Subtext */
+.cta-subtext {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Animations */
+@keyframes fadeInHero {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInPain {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-headline { font-size: 2rem; }
+  .hero-subheadline { font-size: 1rem; }
+  .cta-button { font-size: 1rem; padding: 12px 24px; }
+}
  
 /* SECTIONS */ 
 section { 
