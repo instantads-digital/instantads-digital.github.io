@@ -19,221 +19,168 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://instantads-digital.github.io">
 
-<!-- STYLES -->
-<link rel="stylesheet" href="style.css?v=7">
+<!-- TAILWIND -->
+<script src="https://cdn.tailwindcss.com"></script>
 
 <!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body class="bg-black text-white">
 
-<!-- HEADER --> 
-<header class="header fade-in">
-  <div class="nav-container">
-    <div class="logo-block">
-      <img src="logo.png" class="logo" alt="InstantAds logo">
-      <span class="tagline">From Ads to Websites — We Build Growth</span>
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10 shadow-md">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
+    <div class="flex flex-col items-start transition-transform hover:scale-105">
+      <img src="logo.png" alt="InstantAds logo" class="w-32">
+      <span class="text-xs uppercase tracking-wide text-green-500">From Ads to Websites — We Build Growth</span>
     </div>
-    <nav class="nav-menu">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#case">Case Study</a>
-      <a href="#contact">Contact</a>
+    <nav class="flex space-x-6 text-sm">
+      <a href="#home" class="hover:text-green-500">Home</a>
+      <a href="#services" class="hover:text-green-500">Services</a>
+      <a href="#case" class="hover:text-green-500">Case Study</a>
+      <a href="#contact" class="hover:text-green-500">Contact</a>
     </nav>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero" id="home">
-  <h1>Turn Ad Spend into <span>Predictable Leads</span></h1>
-  <p>Google Ads & SEO That Converts Clicks Into Customers</p>
-  <a href="https://wa.me/918923736292" target="_blank" class="btn">Get Free Ads Audit</a>
+<section id="home" class="text-center py-20 bg-gradient-to-b from-black/70 to-black/85 bg-cover bg-center" style="background-image:url('hero-bg.jpg')">
+  <h1 class="text-4xl md:text-5xl font-bold">Turn Clicks Into <span class="text-green-500 drop-shadow-lg">Clients – Instantly.</span></h1>
+  <p class="mt-4 max-w-2xl mx-auto text-gray-300 text-lg">We don’t just run ads—we build revenue machines. Every campaign, landing page, and design is engineered to maximize ROI and scale your business.</p>
+  <a href="https://wa.me/918923736292" target="_blank" class="inline-block mt-6 px-6 py-3 rounded-full bg-green-500 font-bold text-black">Get Your Free Ads Audit Today</a>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="py-12 bg-black text-center">
+  <h2 class="text-2xl font-semibold text-green-500 mb-6">Are You Facing These Challenges?</h2>
+  <ul class="space-y-4 text-gray-300">
+    <li>Tired of burning money on ads that don’t convert?</li>
+    <li>Frustrated with a website that looks good but fails to sell?</li>
+    <li>Struggling to track what’s really driving your leads?</li>
+  </ul>
 </section>
 
 <!-- ABOUT -->
-<section class="about fade-in">
-  <h2>About Our Lead Generation Agency</h2>
-  <p>InstantAds is a performance-driven lead generation agency focused on helping service-based businesses grow using Google Ads, Meta Ads, and SEO. We specialize in high-intent traffic, conversion optimization, and scalable growth strategies that produce measurable results.</p>
+<section class="py-16 bg-gradient-to-b from-black/80 to-black text-center">
+  <h2 class="text-3xl font-bold text-green-500 mb-6">About Our Lead Generation Agency</h2>
+  <p class="max-w-3xl mx-auto text-gray-300">InstantAds is a performance-driven lead generation agency focused on helping service-based businesses grow using Google Ads, Meta Ads, and SEO. We specialize in high-intent traffic, conversion optimization, and scalable growth strategies that produce measurable results.</p>
 </section>
 
-<!-- SERVICES (Premium cards) -->
-<section class="services" id="services">
-  <h2>Lead Generation & Digital Marketing Services</h2>
-  
-  <div class="service-grid">
-    <div class="service-box">
-      <img src="lead-generation.jpg" alt="Lead Generation">
-      <i class="fas fa-bullseye"></i>
-      <h3>Lead Generation Campaigns</h3>
-      <p>We bring you high-intent customers actively searching for your service.</p>
+<!-- SERVICES -->
+<section id="services" class="py-16 bg-gradient-to-b from-black/80 to-black text-center">
+  <h2 class="text-3xl font-bold text-green-500 mb-10">Lead Generation & Digital Marketing Services</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <!-- Repeat service-boxes -->
+    <div class="bg-black/50 border border-gray-700 rounded-lg shadow-lg p-6 hover:scale-105 transition">
+      <i class="fas fa-bullseye text-green-500 text-3xl mb-4"></i>
+      <h3 class="text-lg font-semibold mb-2">Google & Facebook Ads</h3>
+      <p class="text-gray-300 text-sm">Launch campaigns that attract the right audience, optimize for conversions, and scale profitably without wasted spend.</p>
     </div>
-
-    <div class="service-box">
-      <img src="google-ads.jpg" alt="Google Ads">
-      <i class="fas fa-chart-line"></i>
-      <h3>Google Ads Management</h3>
-      <p>Maximize ROI with data-driven campaigns that convert clicks into paying clients.</p>
-    </div>
-
-    <div class="service-box">
-      <img src="meta-ads.jpg" alt="Meta Ads">
-      <i class="fab fa-facebook"></i>
-      <h3>Meta Ads</h3>
-      <p>Target the right audience with scroll-stopping creatives that drive enquiries.</p>
-    </div>
-
-    <div class="service-box">
-      <img src="seo-growth.jpg" alt="SEO Growth">
-      <i class="fas fa-search"></i>
-      <h3>SEO Growth</h3>
-      <p>Rank higher, get discovered, and generate leads consistently without paid ads.</p>
-    </div>
-  </div>
-
-  <!-- Scroll indicators -->
-  <div class="scroll-indicators">
-    <span class="active"></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="process fade-in">
-  <h2>How We Generate Leads</h2>
-  <div class="process-grid">
-    <div>1️⃣ Strategy & Research</div>
-    <div>2️⃣ Campaign Setup</div>
-    <div>3️⃣ Optimization</div>
-    <div>4️⃣ Scaling Results</div>
+    <!-- Add other service cards here -->
   </div>
 </section>
 
 <!-- CASE STUDY -->
-<section class="case-studies fade-in" id="case">
-  <h2>Google Ads Case Study - Real Lead Generation Results</h2>
-  <div class="case-box">
-    <h3>Local Service Business - Canada</h3>
-    <p>Generated <strong>1,000+ qualified clicks</strong> and <strong>140+ conversions</strong> in 30 days using Google Ads. Achieved an average <strong>cost per lead of ~$18</strong>.</p>
-    <img src="google-ads-result.png" class="case-image" alt="Google Ads lead generation results">
-    <p class="case-note">*Client name and sensitive data hidden for privacy*</p>
+<section id="case" class="py-16 bg-black text-center">
+  <h2 class="text-3xl font-bold text-green-500 mb-8">Google Ads Case Study</h2>
+  <div class="max-w-2xl mx-auto bg-black/50 border border-gray-700 rounded-lg shadow-lg p-6">
+    <h3 class="text-xl font-semibold mb-4">Local Service Business - Canada</h3>
+    <p class="text-gray-300 mb-4">Generated <strong>1,000+ qualified clicks</strong> and <strong>140+ conversions</strong> in 30 days using Google Ads. Achieved an average <strong>cost per lead of ~$18</strong>.</p>
+    <img src="google-ads-result.png" alt="Google Ads results" class="rounded-lg shadow-md mx-auto">
+    <p class="text-gray-500 text-sm mt-2">*Client name and sensitive data hidden for privacy*</p>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testimonials fade-in">
-  <h2>What Our Clients Say</h2>
-  <div class="testimonial-grid">
-    <div class="testimonial-box">
-      <img src="client1-logo.png" alt="Client Logo" class="client-logo">
-      <p class="testimonial-text">"We started receiving consistent, genuine enquiries within a few weeks. The focus was always on quality leads and clear communication."</p>
-      <p class="testimonial-author">Notary & Certified Translation Service, Canada</p>
+<section class="py-16 bg-gradient-to-b from-black to-gray-900 text-center">
+  <h2 class="text-3xl font-bold text-green-500 mb-10">What Our Clients Say</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    <div class="bg-black/50 border border-gray-700 rounded-lg shadow-lg p-6">
+      <img src="client1-logo.png" alt="Client Logo" class="w-20 mx-auto mb-4">
+      <p class="text-gray-300">"We started receiving consistent, genuine enquiries within a few weeks. The focus was always on quality leads and clear communication."</p>
+      <p class="text-green-500 font-semibold mt-2">Notary & Certified Translation Service, Canada</p>
     </div>
-    <div class="testimonial-box">
-      <img src="client2-logo.png" alt="Client Logo" class="client-logo">
-      <p class="testimonial-text">"The campaigns brought in relevant project enquiries rather than generic leads. We finally saw marketing aligned with real business opportunities."</p>
-      <p class="testimonial-author">Engineering Services Business, USA</p>
+    <div class="bg-black/50 border border-gray-700 rounded-lg shadow-lg p-6">
+      <img src="client2-logo.png" alt="Client Logo" class="w-20 mx-auto mb-4">
+      <p class="text-gray-300">"The campaigns brought in relevant project enquiries rather than generic leads. We finally saw marketing aligned with real business opportunities."</p>
+      <p class="text-green-500 font-semibold mt-2">Engineering Services Business, USA</p>
     </div>
   </div>
-</section>
-
-<!-- WHY INSTANTADS -->
-<section class="why-us fade-in">
-  <h2>Why InstantAds</h2>
-  <p class="why-intro">InstantAds is built to support service-based businesses at different stages of growth. Whether you're just starting out or looking to scale, we focus on <strong>practical strategies that drive real business outcomes</strong>.</p>
-</section>
-
-  <!-- WHO WE WORK BEST WITH -->
-<section class="work-best fade-in">
-  <h2>Who We Work Best With</h2>
-  <ul>
-    <li>Service-based businesses and B2B companies</li>
-    <li>Local and international businesses (USA, Canada & more)</li>
-    <li>Business owners looking for quality enquiries, not vanity metrics</li>
-    <li>Teams that want transparent, no-contract marketing support</li>
-  </ul>
-</section>
-
-  <!-- HOW WE SUPPORT DIFFERENT GROWTH STAGES -->
-<section class="growth-stages fade-in">
-  <h2>How We Support Different Growth Stages</h2>
-  <ul>
-    <li>Early-stage businesses starting with SEO and organic growth</li>
-    <li>Businesses testing Google Ads or Meta Ads for the first time</li>
-    <li>Growing companies looking to improve ROI and lead quality</li>
-    <li>Businesses that want flexible strategies without long-term lock-ins</li>
-  </ul>
 </section>
 
 <!-- FAQ -->
-<section class="faq fade-in">
-  <h2>Frequently Asked Questions</h2>
-  <div class="faq-box">
-    <h3>How long does it take to start getting leads?</h3>
-    <p>Most campaigns begin generating leads within 2–4 weeks.</p>
-
-    <h3>Do you work with international clients?</h3>
-    <p>Yes, we work with service-based businesses globally.</p>
-
-    <h3>Do you manage ad budgets?</h3>
-    <p>We manage campaigns and optimization. Ad spend is paid directly by the client.</p>
+<section class="py-16 bg-black text-center">
+  <h2 class="text-3xl font-bold text-green-500 mb-8">Frequently Asked Questions</h2>
+  <div class="max-w-3xl mx-auto space-y-6 text-left">
+    <div>
+      <h3 class="text-lg font-semibold text-green-400">How long does it take to start getting leads?</h3>
+      <p class="text-gray-300">Most campaigns begin generating leads within 2–4 weeks.</p>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold text-green-400">Do you work with international clients?</h3>
+      <p class="text-gray-300">Yes, we work with service-based businesses globally.</p>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold text-green-400">Do you manage ad budgets?</h3>
+      <p class="text-gray-300">We manage campaigns and optimization. Ad spend is paid directly by the client.</p>
+    </div>
   </div>
 </section>
-  
+
 <!-- LEAD FORM -->
-<section class="lead-form fade-in">
-  <div class="form-card">
-    <h2>Get Free Strategy Call</h2>
-    <p class="form-subtext">No contracts. No obligation. We'll review your ads & growth potential.</p>
-    <form action="https://formsubmit.co/instantads0@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="tel" name="phone" placeholder="Your Phone Number" required>
-      <input type="email" name="email" placeholder="Your Email Address" required>
-      <input type="text" name="business" placeholder="Your Business Type (Optional)">
+<section class="py-16 bg-gradient-to-b from-gray-900 to-black text-center">
+  <div class="max-w-md mx-auto bg-black/50 border border-gray-700 rounded-lg shadow-lg p-8">
+    <h2 class="text-2xl font-bold text-green-500 mb-4">Get Free Strategy Call</h2>
+    <p class="text-gray-300 mb-6">No contracts. No obligation. We'll review your ads & growth potential.</p>
+    <form action="https://formsubmit.co/instantads0@gmail.com" method="POST" class="space-y-4">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-gray-800 text-white">
+      <input type="tel" name="phone" placeholder="Your Phone Number" required class="w-full p-3 rounded bg-gray-800 text-white">
+      <input type="email" name="email" placeholder="Your Email Address" required class="w-full p-3 rounded bg-gray-800 text-white">
+      <input type="text" name="business" placeholder="Your Business Type (Optional)" class="w-full p-3 rounded bg-gray-800 text-white">
       <input type="hidden" name="_subject" value="New Lead from InstantAds Website">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://instantads-digital.github.io/thank-you.html">
-      <button type="submit">Get Free Audit</button>
+      <button type="submit" class="w-full py-3 rounded-full bg-green-500 font-bold text-black">Get Your Free Ads Audit Today</button>
     </form>
-    <p class="trust-text"><i class="fa-solid fa-lock"></i> We never spam. Your details are safe.</p>
+    <p class="text-gray-400 text-sm mt-4"><i class="fa-solid fa-lock"></i> We never spam. Your details are safe.</p>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact fade-in" id="contact">
-  <h2>Contact InstantAds</h2>
-  <div class="contact-box">
-    <a href="tel:+918923736292" class="call-btn"><i class="fa-solid fa-phone"></i> Call Us: +91 8923736292</a>
-    <p><i class="fa-solid fa-envelope"></i> instantads0@gmail.com</p>
+<section id="contact" class="py-16 bg-black text-center">
+  <h2 class="text-3xl font-bold text-green-500 mb-6">Contact InstantAds</h2>
+  <div class="space-y-4">
+    <a href="tel:+918923736292" class="inline-block px-6 py-3 rounded-full bg-green-500 font-bold text-black"><i class="fa-solid fa-phone"></i> Call Us: +91 8923736292</a>
+    <p class="text-gray-300"><i class="fa-solid fa-envelope"></i> instantads0@gmail.com</p>
   </div>
 </section>
 
-<footer class="footer">
-  @ 2026 InstantAds. All Rights Reserved.
-  <p style="margin-top:10px; font-size:12px; color:#555;">Trusted by service businesses in USA & Canada</p>
+<!-- FOOTER -->
+<footer class="py-10 bg-gray-900 text-center text-gray-400 text-sm">
+  © 2026 InstantAds. All Rights Reserved.
+  <p class="mt-2 text-xs text-gray-500">Trusted by service businesses in USA & Canada</p>
 </footer>
 
 <!-- FLOATING BUTTONS -->
-<a href="https://wa.me/918923736292" class="whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-<a href="tel:+918923736292" class="call-float"><i class="fa-solid fa-phone"></i> Call Now</a>
+<a href="https://wa.me/918923736292" class="fixed bottom-4 left-4 px-4 py-2 rounded-full bg-green-500 font-bold text-black shadow-lg"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+<a href="tel:+918923736292" class="fixed bottom-4 right-4 px-4 py-2 rounded-full bg-green-500 font-bold text-black shadow-lg"><i class="fa-solid fa-phone"></i> Call Now</a>
 
 <!-- POPUP FORM -->
-<div id="popupForm" class="popup-overlay">
-  <div class="popup-box">
-    <span class="close-btn" onclick="closePopup()">×</span>
-    <h2>Get Free Strategy Call</h2>
-    <p>No contracts. No obligation. We'll review your ads & growth potential.</p>
-    <form action="https://formsubmit.co/instantads0@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="tel" name="phone" placeholder="Your Phone Number" required>
-      <input type="email" name="email" placeholder="Your Email Address" required>
-      <input type="text" name="business" placeholder="Your Business Type (Optional)">
+<div id="popupForm" class="fixed inset-0 bg-black/80 flex justify-center items-center opacity-0 invisible transition duration-300 z-50">
+  <div class="bg-gray-900 p-6 rounded-lg w-11/12 max-w-md relative">
+    <span class="absolute top-2 right-3 text-2xl cursor-pointer" onclick="closePopup()">×</span>
+    <h2 class="text-2xl font-bold text-green-500 mb-4">Get Free Strategy Call</h2>
+    <p class="text-gray-300 mb-6">No contracts. No obligation. We'll review your ads & growth potential.</p>
+    <form action="https://formsubmit.co/instantads0@gmail.com" method="POST" class="space-y-4">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-gray-800 text-white">
+      <input type="tel" name="phone" placeholder="Your Phone Number" required class="w-full p-3 rounded bg-gray-800 text-white">
+      <input type="email" name="email" placeholder="Your Email Address" required class="w-full p-3 rounded bg-gray-800 text-white">
+      <input type="text" name="business" placeholder="Your Business Type (Optional)" class="w-full p-3 rounded bg-gray-800 text-white">
       <input type="hidden" name="_subject" value="New Lead from Popup">
       <input type="hidden" name="_captcha" value="false">
-      <button type="submit">Get Free Audit</button>
+      <button type="submit" class="w-full py-3 rounded-full bg-green-500 font-bold text-black">Get Free Audit</button>
     </form>
-    <p class="trust-text"><i class="fa-solid fa-lock"></i> We never spam. Your details are safe.</p>
+    <p class="text-gray-400 text-sm mt-4"><i class="fa-solid fa-lock"></i> We never spam. Your details are safe.</p>
   </div>
 </div>
 
@@ -241,15 +188,20 @@
 <script>
 function closePopup() {
   document.getElementById("popupForm").classList.remove("show");
+  document.getElementById("popupForm").style.opacity = "0";
+  document.getElementById("popupForm").style.visibility = "hidden";
   localStorage.setItem("popupShown", "true");
 }
 setTimeout(() => {
   if (!localStorage.getItem("popupShown")) {
-    document.getElementById("popupForm").classList.add("show");
+    const popup = document.getElementById("popupForm");
+    popup.classList.add("show");
+    popup.style.opacity = "1";
+    popup.style.visibility = "visible";
   }
 }, 8000);
 
-// NEW: Stagger animation for service boxes
+// Stagger animation for service boxes
 const boxes = document.querySelectorAll(".service-box");
 boxes.forEach((box, index) => {
   setTimeout(() => {
@@ -259,41 +211,36 @@ boxes.forEach((box, index) => {
   }, index * 200);
 });
 </script>
-  
-<!-- JS for scroll indicators -->
-<script>
-  const grid = document.querySelector('.service-grid');
-  const indicators = document.querySelectorAll('.scroll-indicators span');
-  const cards = document.querySelectorAll('.service-box');
 
-  // Update active dot on scroll
+<script>
+// Scroll indicators (if you keep them)
+const grid = document.querySelector('.service-grid');
+const indicators = document.querySelectorAll('.scroll-indicators span');
+const cards = document.querySelectorAll('.service-box');
+if (grid && indicators.length) {
   grid.addEventListener('scroll', () => {
     const scrollLeft = grid.scrollLeft;
-    const cardWidth = cards[0].offsetWidth + 12; // card width + gap
+    const cardWidth = cards[0].offsetWidth + 12;
     const index = Math.round(scrollLeft / cardWidth);
-
     indicators.forEach((dot, i) => {
       dot.classList.toggle('active', i === index);
     });
   });
-
-  // Make dots clickable
   indicators.forEach((dot, i) => {
     dot.addEventListener('click', () => {
       const cardWidth = cards[0].offsetWidth + 12;
-      grid.scrollTo({
-        left: i * cardWidth,
-        behavior: 'smooth'
-      });
+      grid.scrollTo({ left: i * cardWidth, behavior: 'smooth' });
     });
   });
+}
 </script>
 
-  <script>
-  const aboutSection = document.querySelector('.about');
+<script>
+// Intersection Observer for About section fade-in
+const aboutSection = document.querySelector('.about');
+if (aboutSection) {
   const aboutHeading = aboutSection.querySelector('h2');
   const aboutParagraph = aboutSection.querySelector('p');
-
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -304,8 +251,9 @@ boxes.forEach((box, index) => {
       }
     });
   }, { threshold: 0.2 });
-
   observer.observe(aboutSection);
+}
 </script>
+
 </body>
 </html>
