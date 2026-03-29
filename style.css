@@ -280,55 +280,81 @@ h2 {
 /* FIX: SUB HEADINGS COLOR */ 
 .why-us h3 { color: var(--secondary-color); } 
  
-/* ABOUT */ 
-.about { 
-  position: relative; 
-  min-height: auto; /* let content define height */ 
-  padding: 30px 20px; /* reduced padding */ 
-  text-align: center; 
-  color: #fff; 
-  overflow: hidden; 
- 
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), 
-              url("about-bg.jpg") center / cover no-repeat; 
-  background-attachment: fixed; /* immersive effect on desktop */ 
-} 
- 
-/* Content animation */ 
-.about h2, 
-.about p { 
-  position: relative; 
-  z-index: 2; 
-  opacity: 0; 
-  transform: translateY(15px); 
-  transition: opacity 0.6s ease, transform 0.6s ease; 
-} 
- 
-.about h2.visible, 
-.about p.visible { 
-  opacity: 1; 
-  transform: translateY(0); 
-} 
- 
-/* Mobile fallback */ 
-@media (max-width: 768px) { 
-  .about { 
-    min-height: auto;       /* no forced full screen height */ 
-    padding: 25px 15px;     /* tighter spacing on mobile */ 
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), 
-                url("about-bg.jpg") center / cover no-repeat; 
-    background-attachment: scroll; 
-  } 
-} 
- 
-/* Reduce gap between About & Services */ 
-.about { 
-  margin-bottom: 20px; /* small controlled gap */ 
-} 
-.services { 
-  margin-top: 0;       /* remove extra top gap */ 
-  padding-top: 30px;   /* tighter spacing */ 
-} 
+/* ABOUT SECTION */
+.about {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-intro {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Grid layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.about-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.about-card i {
+  font-size: 28px;
+  color: #22c55e;
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  color: #eee;
+  line-height: 1.5;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(34,197,94,0.4);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about h2 { font-size: 1.8rem; }
+  .about-intro { font-size: 1rem; }
+  .about-card p { font-size: 0.95rem; }
+}
  
 /* WHY */ 
 .why-us { text-align: center; } 
