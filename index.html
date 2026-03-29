@@ -69,7 +69,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       InstantAds is not just another marketing agency — we are a growth engine built for service businesses that want predictable, scalable results.
     </p>
 
-    <div class="about-grid">
+    <div class="about-row" id="aboutRow">
       <div class="about-card">
         <i class="fas fa-bullseye"></i>
         <h3>Full-Funnel Systems</h3>
@@ -94,8 +94,30 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         <p>We don’t chase clicks — we build systems that generate clients.</p>
       </div>
     </div>
+
+    <!-- Scroll indicators -->
+    <div class="scroll-indicators">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
   </div>
 </section>
+
+<script>
+  const aboutRow = document.getElementById("aboutRow");
+  const dots = document.querySelectorAll(".scroll-indicators .dot");
+
+  aboutRow.addEventListener("scroll", () => {
+    const cardWidth = aboutRow.querySelector(".about-card").offsetWidth + 20; // card + gap
+    const index = Math.round(aboutRow.scrollLeft / cardWidth);
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
+  });
+</script>
  
 <!-- SERVICES (Premium cards) --> 
 <section class="services" id="services"> 
