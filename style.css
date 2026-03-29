@@ -881,6 +881,8 @@ body {
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
   padding: 20px;
   text-align: center;
+  opacity: 0; /* start hidden for stagger */
+  transform: translateY(20px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -933,9 +935,30 @@ body {
 
   .process-box {
     flex: 0 0 75%;
-    min-width: 200px;
+    min-width: 220px;
     scroll-snap-align: start;
   }
+}
+
+/* Process scroll indicators */
+.process-scroll-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 6px;
+}
+
+.process-scroll-indicators span {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.process-scroll-indicators span.active {
+  background: var(--primary-color);
+}
 }
 }
 .work-best, .growth-stages, .faq { 
