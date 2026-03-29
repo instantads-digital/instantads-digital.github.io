@@ -847,7 +847,9 @@ body {
 
 /* PROCESS SECTION styled like service cards */
 .process {
-  background: #0a0a0a;
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+              url("background.jpg") center / cover no-repeat;
+  background-attachment: fixed;
   padding: 60px 20px;
   text-align: center;
 }
@@ -879,8 +881,6 @@ body {
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
   padding: 20px;
   text-align: center;
-  opacity: 0;
-  transform: translateY(15px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -908,7 +908,16 @@ body {
   border-color: var(--primary-color);
 }
 
-/* Mobile optimization */
+/* Force 4 cards per row on desktop */
+@media (min-width: 1024px) {
+  .process-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+/* Mobile optimization with horizontal scroll */
 @media (max-width: 768px) {
   .process-grid {
     display: flex;
@@ -927,6 +936,7 @@ body {
     min-width: 200px;
     scroll-snap-align: start;
   }
+}
 }
 .work-best, .growth-stages, .faq { 
   max-width: 900px; 
