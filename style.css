@@ -168,15 +168,15 @@ body {
  
 /* HERO SECTION */
 .hero {
-  position: relative;
-  background: #000;
+  background: linear-gradient(180deg, #000 0%, #111 100%);
   color: #fff;
-  padding: 100px 20px;
+  padding: 80px 20px;
   text-align: center;
-  overflow: hidden;
+  position: relative;
+  overflow: hidden; /* allows gradient overlay */
 }
 
-/* Animated gradient background */
+/* Animated gradient overlay */
 .hero::before {
   content: "";
   position: absolute;
@@ -188,16 +188,16 @@ body {
 }
 
 .hero-container {
-  position: relative;
-  z-index: 1; /* keep content above background */
   max-width: 900px;
   margin: auto;
+  position: relative;
+  z-index: 1; /* ensures content stays above overlay */
   animation: fadeInHero 1.2s ease forwards;
 }
 
 /* Headline */
 .hero-headline {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 20px;
   background: linear-gradient(90deg, #22c55e, #16a34a);
@@ -218,6 +218,7 @@ body {
   font-size: 1rem;
   margin: 8px 0;
   color: #eee;
+  opacity: 0; /* ensures smooth fade-in */
   animation: fadeInPain 1s ease forwards;
 }
 
@@ -239,7 +240,7 @@ body {
   transition: all 0.3s ease;
   box-shadow: 0 0 12px rgba(34,197,94,0.6);
 
-  /* Pulsing glow animation */
+  /* Pulsing glow */
   animation: pulseGlow 2.5s infinite;
 }
 
@@ -272,7 +273,6 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* Pulsing glow for CTA */
 @keyframes pulseGlow {
   0% { box-shadow: 0 0 12px rgba(34,197,94,0.6); }
   50% { box-shadow: 0 0 24px rgba(34,197,94,0.9); }
