@@ -226,7 +226,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     </div>
   </div>
 </section>
- 
 <!-- CASE STUDY --> 
 <section class="case-studies fade-in" id="case"> 
   <h2>Google Ads Case Study - Real Lead Generation Results</h2> 
@@ -464,6 +463,17 @@ steps.forEach(step => observer.observe(step));
  
   observer.observe(aboutSection); 
 </script> 
+
+      // Stagger animation for process boxes
+const processBoxes = document.querySelectorAll(".process-box");
+processBoxes.forEach((box, index) => {
+  setTimeout(() => {
+    box.style.transition = "0.5s";
+    box.style.opacity = 1;
+    box.style.transform = "translateY(0)";
+  }, index * 200);
+});
+      
 </body> 
 </html> 
  
