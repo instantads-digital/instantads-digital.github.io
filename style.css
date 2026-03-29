@@ -394,150 +394,166 @@ body {
 .why-us p { max-width: 750px; margin: auto; } 
 .why-box { max-width: 500px; margin: 20px auto; } 
  
-/* SERVICES */ 
-.services { 
-  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
-              url("background.jpg") center / cover no-repeat; 
-  background-attachment: fixed; 
-  padding: 60px 20px; 
-  text-align: center; 
-} 
- 
-.services h2 { 
-  color: var(--primary-color); 
-  font-size: 28px; 
-  margin-bottom: 40px; 
-  text-shadow: 0 0 10px rgba(34,197,94,0.4); 
-} 
- 
-/* Service grid (desktop) */ 
-.service-grid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
-  gap: 30px; 
-} 
- 
-/* Service cards */ 
-.service-box { 
-  background: rgba(255, 255, 255, 0.05); 
-  backdrop-filter: blur(12px); 
-  border: 1px solid rgba(255,255,255,0.1); 
-  border-radius: 12px; 
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25); 
-  padding: 20px; 
-  text-align: center; 
-  cursor: pointer; 
-  opacity: 0; 
-  transform: translateY(15px); 
-  min-height: 280px; 
-  display: flex; 
-  flex-direction: column; 
-  justify-content: flex-start; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
-} 
- 
-.service-box img { 
-  width: 100%; 
-  height: 120px; 
-  object-fit: cover; 
-  border-radius: 10px; 
-  margin-bottom: 10px; 
-} 
- 
-.service-box i { 
-  font-size: 28px; 
-  color: var(--primary-color); 
-  margin-bottom: 8px; 
-} 
- 
-.service-box h3 { 
-  font-size: 18px; 
-  margin-bottom: 6px; 
-  color: var(--primary-color); 
-} 
- 
-.service-box p { 
-  font-size: 14px; 
-  color: #ccc; 
-  line-height: 1.4; 
-} 
- 
-/* Hover effect */ 
-.service-box:hover { 
-  transform: translateY(-4px) scale(1.02); 
-  box-shadow: 0 10px 30px rgba(34,197,94,0.25); 
-  border-color: var(--primary-color); 
-} 
- 
-/* Mobile optimization with horizontal scroll */ 
-@media (max-width: 768px) { 
-  .service-grid { 
-    display: flex;                  /* switch to flexbox */ 
-    overflow-x: auto;               /* enable horizontal scroll */ 
-    gap: 12px; 
-    scroll-snap-type: x mandatory;  /* smooth snapping */ 
-    -webkit-overflow-scrolling: touch; 
-  } 
- 
-  /* Hide scrollbar for cleaner look */ 
-  .service-grid::-webkit-scrollbar { 
-    display: none; 
-  } 
- 
-  .service-box { 
-    flex: 0 0 70%;                  /* each card ~70% width */ 
-    min-width: 180px;               /* prevent squishing */ 
-    padding: 12px; 
-    scroll-snap-align: start;       /* snap each card */ 
-  } 
- 
-  .service-box img { 
-    height: 90px; 
-    margin-bottom: 6px; 
-  } 
- 
-  .service-box i { 
-    font-size: 20px; 
-    margin-bottom: 4px; 
-  } 
- 
-  .service-box h3 { 
-    font-size: 14px; 
-    margin-bottom: 4px; 
-  } 
- 
-  .service-box p { 
-    font-size: 12px; 
-    line-height: 1.3; 
-  } 
- 
-  /* Scroll indicators (dots) */ 
-  .scroll-indicators { 
-    display: flex; 
-    justify-content: center; 
-    margin-top: 15px; 
-    gap: 6px; 
-  } 
- 
-  .scroll-indicators span { 
-    width: 8px; 
-    height: 8px; 
-    background: #ccc; 
-    border-radius: 50%; 
-    transition: background 0.3s ease; 
-  } 
- 
-  .scroll-indicators span.active { 
-    background: var(--primary-color); 
-  } 
-} 
- 
-/* Extra small screens */ 
-@media (max-width: 480px) { 
-  .service-box { 
-    flex: 0 0 85%; /* slightly wider for tiny phones */ 
-  } 
-} 
+/* SERVICES */
+.services {
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+              url("background.jpg") center / cover no-repeat;
+  background-attachment: fixed;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  color: var(--primary-color);
+  font-size: 28px;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(34,197,94,0.4);
+}
+
+/* Service grid (desktop) */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Service cards */
+.service-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(15px);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.service-box i {
+  font-size: 28px;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.service-box h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: var(--primary-color);
+}
+
+.service-box p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* Hover effect */
+.service-box:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(34,197,94,0.25);
+  border-color: var(--primary-color);
+}
+
+/* Mobile optimization with horizontal scroll */
+@media (max-width: 768px) {
+  .service-grid {
+    display: flex;                  /* switch to flexbox */
+    overflow-x: auto;               /* enable horizontal scroll */
+    gap: 12px;
+    scroll-snap-type: x mandatory;  /* smooth snapping */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hide scrollbar for cleaner look */
+  .service-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-box {
+    flex: 0 0 70%;                  /* each card ~70% width */
+    min-width: 180px;               /* prevent squishing */
+    padding: 12px;
+    scroll-snap-align: start;       /* snap each card */
+  }
+
+  .service-box img {
+    height: 90px;
+    margin-bottom: 6px;
+  }
+
+  .service-box i {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .service-box h3 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .service-box p {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  /* Scroll indicators (dots) */
+  .scroll-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 6px;
+  }
+
+  .scroll-indicators span {
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+  }
+
+  .scroll-indicators span.active {
+    background: var(--primary-color);
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .service-box {
+    flex: 0 0 85%; /* slightly wider for tiny phones */
+  }
+}
+
+/* Desktop optimization: force 4 cards per row */
+@media (min-width: 1024px) {
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* always 4 per row */
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .service-box {
+    width: 100%;
+    min-height: 240px; /* consistent height */
+  }
+}
  
 /* CASE */ 
 .case-box { 
