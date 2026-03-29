@@ -432,7 +432,33 @@ boxes.forEach((box, index) => {
     }); 
   }); 
 </script> 
- 
+
+<script>
+// Scroll-triggered storytelling for process section
+const steps = document.querySelectorAll('.process-step');
+const progressBar = document.querySelector('.progress-bar');
+const stepIndicators = document.querySelectorAll('.progress-indicator .step');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const step = entry.target.dataset.step;
+      entry.target.classList.add('visible');
+      
+      // Update progress bar
+      progressBar.style.width = `${step * 25}%`;
+      
+      // Highlight active step
+      stepIndicators.forEach((dot, i) => {
+        dot.classList.toggle('active', i + 1 == step);
+      });
+    }
+  });
+}, { threshold: 0.4 });
+
+steps.forEach(step => observer.observe(step));
+</script>
+
   <script> 
   const aboutSection = document.querySelector('.about'); 
   const aboutHeading = aboutSection.querySelector('h2'); 
