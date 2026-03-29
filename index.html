@@ -367,104 +367,60 @@ safe.</p>
   </div> 
 </div> 
  
-<!-- SCRIPTS --> 
-<script> 
-function closePopup() { 
-  document.getElementById("popupForm").classList.remove("show"); 
-  localStorage.setItem("popupShown", "true"); 
-} 
-setTimeout(() => { 
-  if (!localStorage.getItem("popupShown")) { 
-    document.getElementById("popupForm").classList.add("show"); 
-  } 
-}, 8000); 
- 
-// NEW: Stagger animation for service boxes 
-const boxes = document.querySelectorAll(".service-box"); 
-boxes.forEach((box, index) => { 
-  setTimeout(() => { 
-    box.style.transition = "0.5s"; 
-    box.style.opacity = 1; 
-    box.style.transform = "translateY(0)"; 
-  }, index * 200); 
-}); 
-</script> 
-   
-<!-- JS for scroll indicators --> 
-<script> 
-  const grid = document.querySelector('.service-grid'); 
-  const indicators = document.querySelectorAll('.scroll-indicators span'); 
-  const cards = document.querySelectorAll('.service-box'); 
- 
-  // Update active dot on scroll 
-  grid.addEventListener('scroll', () => { 
-    const scrollLeft = grid.scrollLeft; 
-    const cardWidth = cards[0].offsetWidth + 12; // card width + gap 
-    const index = Math.round(scrollLeft / cardWidth); 
- 
-    indicators.forEach((dot, i) => { 
-      dot.classList.toggle('active', i === index); 
-    }); 
-  }); 
- 
-  // Make dots clickable 
-  indicators.forEach((dot, i) => { 
-    dot.addEventListener('click', () => { 
-      const cardWidth = cards[0].offsetWidth + 12; 
-      grid.scrollTo({ 
-        left: i * cardWidth, 
-        behavior: 'smooth' 
-      }); 
-    }); 
-  }); 
-</script> 
-
+<!-- SCRIPTS -->
 <script>
-// Scroll-triggered storytelling for process section
-const steps = document.querySelectorAll('.process-step');
-const progressBar = document.querySelector('.progress-bar');
-const stepIndicators = document.querySelectorAll('.progress-indicator .step');
+function closePopup() {
+  document.getElementById("popupForm").classList.remove("show");
+  localStorage.setItem("popupShown", "true");
+}
+setTimeout(() => {
+  if (!localStorage.getItem("popupShown")) {
+    document.getElementById("popupForm").classList.add("show");
+  }
+}, 8000);
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const step = entry.target.dataset.step;
-      entry.target.classList.add('visible');
-      
-      // Update progress bar
-      progressBar.style.width = `${step * 25}%`;
-      
-      // Highlight active step
-      stepIndicators.forEach((dot, i) => {
-        dot.classList.toggle('active', i + 1 == step);
-      });
-    }
-  });
-}, { threshold: 0.4 });
-
-steps.forEach(step => observer.observe(step));
+// NEW: Stagger animation for service boxes
+const boxes = document.querySelectorAll(".service-box");
+boxes.forEach((box, index) => {
+  setTimeout(() => {
+    box.style.transition = "0.5s";
+    box.style.opacity = 1;
+    box.style.transform = "translateY(0)";
+  }, index * 200);
+});
 </script>
 
-  <script> 
-  const aboutSection = document.querySelector('.about'); 
-  const aboutHeading = aboutSection.querySelector('h2'); 
-  const aboutParagraph = aboutSection.querySelector('p'); 
- 
-  const observer = new IntersectionObserver(entries => { 
-    entries.forEach(entry => { 
-      if (entry.isIntersecting) { 
-        aboutHeading.classList.add('visible'); 
-        setTimeout(() => { 
-          aboutParagraph.classList.add('visible'); 
-        }, 300); 
-      } 
-    }); 
-  }, { threshold: 0.2 }); 
- 
-  observer.observe(aboutSection); 
-</script> 
+<!-- JS for scroll indicators (Services) -->
+<script>
+const grid = document.querySelector('.service-grid');
+const indicators = document.querySelectorAll('.scroll-indicators span');
+const cards = document.querySelectorAll('.service-box');
 
-      // Stagger animation for process boxes
+// Update active dot on scroll
+grid.addEventListener('scroll', () => {
+  const scrollLeft = grid.scrollLeft;
+  const cardWidth = cards[0].offsetWidth + 12; // card width + gap
+  const index = Math.round(scrollLeft / cardWidth);
+
+  indicators.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+});
+
+// Make dots clickable
+indicators.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    const cardWidth = cards[0].offsetWidth + 12;
+    grid.scrollTo({
+      left: i * cardWidth,
+      behavior: 'smooth'
+    });
+  });
+});
+</script>
+
+<!-- Stagger animation for process boxes -->
+<script>
 const processBoxes = document.querySelectorAll(".process-box");
 processBoxes.forEach((box, index) => {
   setTimeout(() => {
@@ -473,6 +429,56 @@ processBoxes.forEach((box, index) => {
     box.style.transform = "translateY(0)";
   }, index * 200);
 });
+</script>
+
+<!-- JS for scroll indicators (Process Section) -->
+<script>
+const processGrid = document.querySelector('.process-grid');
+const processIndicators = document.querySelectorAll('.process-scroll-indicators span');
+const processCards = document.querySelectorAll('.process-box');
+
+// Update active dot on scroll
+processGrid.addEventListener('scroll', () => {
+  const scrollLeft = processGrid.scrollLeft;
+  const cardWidth = processCards[0].offsetWidth + 12;
+  const index = Math.round(scrollLeft / cardWidth);
+
+  processIndicators.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+});
+
+// Make dots clickable
+processIndicators.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    const cardWidth = processCards[0].offsetWidth + 12;
+    processGrid.scrollTo({
+      left: i * cardWidth,
+      behavior: 'smooth'
+    });
+  });
+});
+</script>
+
+<!-- About section observer -->
+<script>
+const aboutSection = document.querySelector('.about');
+const aboutHeading = aboutSection.querySelector('h2');
+const aboutParagraph = aboutSection.querySelector('p');
+
+const aboutObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      aboutHeading.classList.add('visible');
+      setTimeout(() => {
+        aboutParagraph.classList.add('visible');
+      }, 300);
+    }
+  });
+}, { threshold: 0.2 });
+
+aboutObserver.observe(aboutSection);
+</script>
       
 </body> 
 </html> 
