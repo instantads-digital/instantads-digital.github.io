@@ -844,6 +844,126 @@ body {
   text-align: center; 
   border: 1px solid #222; 
 } 
+
+/* PROCESS STORYTELLING */
+.process-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+.process-left {
+  flex: 0 0 280px;
+  position: sticky;
+  top: 120px;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.process-left h2 {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.process-left p {
+  margin-top: 10px;
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.progress-indicator {
+  margin-top: 20px;
+  position: relative;
+}
+
+.progress-indicator .step {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  line-height: 28px;
+  margin-right: 10px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.progress-indicator .step.active {
+  background: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.progress-bar {
+  height: 4px;
+  background: var(--primary-color);
+  width: 0%;
+  transition: width 0.4s ease;
+  margin-top: 10px;
+}
+
+.process-right {
+  flex: 1;
+}
+
+.process-step {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.process-step i {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.process-step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Micro-interactions for icons */
+.process-step[data-step="1"] i {
+  animation: pulseIcon 2s infinite;
+}
+.process-step[data-step="2"] i {
+  animation: rotateIcon 3s infinite;
+}
+.process-step[data-step="3"] i {
+  animation: bounceIcon 2.5s infinite;
+}
+.process-step[data-step="4"] i {
+  animation: floatIcon 3s infinite;
+}
+
+@keyframes pulseIcon {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+@keyframes rotateIcon {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes bounceIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
  
 .work-best, .growth-stages, .faq { 
   max-width: 900px; 
