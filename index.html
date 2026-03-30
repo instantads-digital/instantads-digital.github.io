@@ -440,13 +440,22 @@ processBoxes.forEach((box, index) => {
 });
 </script>
 
-<!-- Scroll indicators for process section -->
 <script>
+// Stagger animation for process boxes
+const processBoxes = document.querySelectorAll(".process-box");
+processBoxes.forEach((box, index) => {
+  setTimeout(() => {
+    box.style.transition = "0.5s";
+    box.style.opacity = 1;
+    box.style.transform = "translateY(0)";
+  }, index * 200);
+});
+
+// Scroll indicators for process section
 const processGrid = document.querySelector('.process-grid');
 const processIndicators = document.querySelectorAll('.process-scroll-indicators span');
 const processCards = document.querySelectorAll('.process-box');
 
-// Update active dot on scroll
 processGrid.addEventListener('scroll', () => {
   const scrollLeft = processGrid.scrollLeft;
   const cardWidth = processCards[0].offsetWidth + 12;
@@ -457,7 +466,6 @@ processGrid.addEventListener('scroll', () => {
   });
 });
 
-// Make dots clickable
 processIndicators.forEach((dot, i) => {
   dot.addEventListener('click', () => {
     const cardWidth = processCards[0].offsetWidth + 12;
