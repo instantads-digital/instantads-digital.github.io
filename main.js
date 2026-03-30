@@ -10,22 +10,34 @@
 (function initPopup() {
   const popup = document.getElementById('popupForm');
   const closeBtn = document.getElementById('popupClose');
+  const firstInput = popup ? popup.querySelector('input') : null;
 
   if (!popup) return;
 
   function showPopup() {
     popup.classList.add('show');
     popup.setAttribute('aria-hidden', 'false');
+    // Auto-focus first input for instant action
+    if (firstInput) firstInput.focus();
   }
+
   function hidePopup() {
     popup.classList.remove('show');
     popup.setAttribute('aria-hidden', 'true');
     try { localStorage.setItem('popupShown', 'true'); } catch (e) {}
   }
 
+  // Close button
   if (closeBtn) closeBtn.addEventListener('click', hidePopup);
+
+  // Click outside popup closes it
   popup.addEventListener('click', (e) => {
     if (e.target === popup) hidePopup();
+  });
+
+  // ESC key closes popup
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') hidePopup();
   });
 
   // Show after delay if not shown before
