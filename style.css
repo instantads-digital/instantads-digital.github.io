@@ -140,21 +140,22 @@ html,body{
   margin-bottom: 18px;
 }
 
-/* Pain points with red cross icon */
+/* Pain points: show only a red X visually, keep text for screen readers */
 .hero-painpoints p {
+  /* visually hide the text but keep it accessible */
+  color: transparent;
+  font-size: 0;
+  line-height: 1;
   display: flex;
+  justify-content: center; /* change to flex-start to left-align the X */
   align-items: center;
-  justify-content: center; /* keep if you want the whole line centered; remove to left-align text */
-  gap: 10px;
-  font-size: 1rem;
   margin: 8px 0;
-  color: #eee;
-  line-height: 1.4;
+  gap: 0.5rem;
 }
 
-/* red cross before each pain point */
+/* red cross before each pain point (visible) */
 .hero-painpoints p::before {
-  content: "✖"; /* change to "☒" if you prefer the square box */
+  content: "✖";
   color: #ff4d4f;
   font-weight: 700;
   font-size: 1.05rem;
@@ -162,7 +163,6 @@ html,body{
   width: 1.2em;
   text-align: center;
   flex: 0 0 auto;
-  transform: translateY(0);
 }
 
 /* Slightly smaller icon on very small screens */
@@ -172,7 +172,6 @@ html,body{
     width: 1em;
   }
 }
-    
 /* CTA */
 .cta-button{
   display:inline-block;margin-top:18px;padding:12px 26px;border-radius:8px;
