@@ -498,13 +498,14 @@ rgba(34,197,94,0.22);border-color:var(--primary-color)}
   .client-logo { width: 56px; } 
 } 
  
-/* Why / Who / Growth / FAQ sections — center content using .section-inner */ 
-.why-us, .work-best, .growth-stages, .faq{ 
-  background:transparent; 
-  color:#ccc; 
-  text-align:left; 
-  padding:0; 
-} 
+/* Why / Who / Growth / FAQ sections — center content using .section-inner */
+.why-us, .work-best, .growth-stages, .faq {
+  background: transparent;
+  color: #ccc;
+  text-align: left;
+  padding: 0;
+}
+
 /* Section wrappers */
 .why-us .section-inner,
 .work-best .section-inner,
@@ -560,13 +561,26 @@ rgba(34,197,94,0.22);border-color:var(--primary-color)}
   align-items: center;
   gap: 16px;
   text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1); /* subtle divider */
+  padding-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  transition: all 0.3s ease-in-out; /* smooth transitions */
 }
 
 .trust-image {
   width: 120px;
   height: auto;
   border-radius: 50%;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #22c55e, #0ea5e9) border-box; /* gradient ring */
   box-shadow: 0 0 12px rgba(34,197,94,0.35);
+  transition: transform 0.3s ease-in-out;
+}
+
+.trust-image:hover {
+  transform: scale(1.05); /* subtle hover zoom */
 }
 
 .trust-content {
@@ -594,12 +608,20 @@ rgba(34,197,94,0.22);border-color:var(--primary-color)}
   padding: 2px 6px;
   line-height: 1;
   box-shadow: 0 0 6px rgba(34,197,94,0.35);
+  animation: pulse 2s infinite; /* glow pulse */
+  transition: all 0.3s ease-in-out;
+}
+
+.verified-badge:hover {
+  box-shadow: 0 0 16px rgba(34,197,94,0.8); /* glow burst on hover */
+  transform: scale(1.1);
 }
 
 .trust-tagline {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #aaa;
-  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .trust-text {
@@ -619,6 +641,16 @@ rgba(34,197,94,0.22);border-color:var(--primary-color)}
   .trust-content {
     align-items: flex-start;
   }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 6px rgba(34,197,94,0.35); }
+  50% { box-shadow: 0 0 12px rgba(34,197,94,0.6); }
+  100% { box-shadow: 0 0 6px rgba(34,197,94,0.35); }
 }
 
 /* FORM */ 
