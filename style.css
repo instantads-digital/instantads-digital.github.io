@@ -140,21 +140,21 @@ html,body{
   margin-bottom: 18px;
 }
 
-/* Pain points: show red X and keep pain point text visible and aligned */
+/* Pain points: show red X and keep pain point text visible and aligned; X aligned precisely */
 .hero-painpoints p {
   position: relative;        /* anchor for the pseudo-element */
-  padding-left: 1.8em;      /* space reserved for the X */
+  padding-left: 1.8em;       /* space reserved for the X */
   margin: 8px 0;
-  color: #eee;              /* visible text color */
+  color: #eee;               /* visible text color */
   font-size: 1rem;
   line-height: 1.4;
   display: block;
-  text-align: center;       /* center text under hero; change to left if you prefer left-aligned text */
+  text-align: center;        /* center text under hero; change to left if you prefer left-aligned text */
 }
 
 /* red cross before each pain point (absolutely positioned for perfect alignment) */
 .hero-painpoints p::before {
-  content: "✖";             /* change to "☒" for boxed cross */
+  content: "✖";              /* change to "☒" for boxed cross */
   position: absolute;
   left: 0;
   top: 50%;
@@ -165,7 +165,7 @@ html,body{
   line-height: 1;
   width: 1.2em;
   text-align: center;
-  pointer-events: none;     /* ensures the X doesn't intercept taps */
+  pointer-events: none;      /* ensures the X doesn't intercept taps */
 }
 
 /* Slightly smaller icon on very small screens and tighter left spacing */
@@ -177,29 +177,42 @@ html,body{
   .hero-painpoints p::before {
     font-size: 0.95rem;
     width: 1em;
-    left: 0.05em;           /* tiny nudge if needed on very small screens */
+    left: 0.05em;            /* tiny nudge if needed on very small screens */
   }
 }
 
-}
 /* CTA */
-.cta-button{
-  display:inline-block;margin-top:18px;padding:12px 26px;border-radius:8px;
-  background:linear-gradient(90deg,var(--primary-color),var(--secondary-color));
-  color:#000;font-weight:700;text-decoration:none;
-  box-shadow:0 6px 18px rgba(34,197,94,0.22);
-  transition:transform .18s ease,box-shadow .18s ease;
+.cta-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 26px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(34,197,94,0.22);
+  transition: transform .18s ease, box-shadow .18s ease;
+  position: relative;
+  z-index: 2; /* ensure CTA sits above hero::before and other elements */
 }
-.cta-button:hover{transform:scale(1.03);box-shadow:0 10px 26px rgba(34,197,94,0.28)}
-.cta-subtext{color:var(--muted);margin-top:10px;font-size:.95rem}
+.cta-button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 26px rgba(34,197,94,0.28);
+}
+.cta-subtext {
+  color: var(--muted);
+  margin-top: 10px;
+  font-size: .95rem;
+}
 
 /* Headings (default gradient text) */
-h2{
-  font-size:1.9rem;
-  margin-bottom:18px;
-  background:linear-gradient(90deg,var(--primary-color),var(--secondary-color));
-  -webkit-background-clip:text;
-  color:transparent;
+h2 {
+  font-size: 1.9rem;
+  margin-bottom: 18px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /* ABOUT section */
