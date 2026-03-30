@@ -155,7 +155,7 @@ html,body{
   line-height: 1.4;
 }
 .hero-painpoints p::before {
-  content: "✖";
+  content: "✖";          /* proper red cross */
   position: absolute;
   left: 0;
   top: 50%;
@@ -214,7 +214,6 @@ h2 {
   -webkit-background-clip: text;
   color: transparent;
 }
-
 /* ABOUT section */
 .about{background:var(--bg-dark);color:var(--text);text-align:center}
 .about .section-inner{padding-top:28px;padding-bottom:28px}
@@ -442,16 +441,40 @@ h2 {
 /* Ensure footer content not blocked by floating buttons */
 .footer{padding:60px 20px 120px;position:relative;z-index:1}
 
+/* Footer */
+.footer {
+  padding: 60px 20px 120px;
+  position: relative;
+  z-index: 1;
+}
+
 /* Contact box inside footer */
-.contact-box{display:flex;flex-direction:column;align-items:center;gap:8px}
-.contact-box a.call-btn{display:inline-block;background:var(--primary-color);padding:12px 20px;border-radius:30px;color:#000;text-decoration:none;font-weight:700}
-.contact-box a.email-link{color:#ccc;text-decoration:underline}
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.contact-box a.call-btn {
+  display: inline-block;
+  background: var(--primary-color);
+  padding: 12px 20px;
+  border-radius: 30px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+}
+.contact-box a.email-link {
+  color: #ccc;
+  text-decoration: underline;
+}
 
 /* Social links */
 .social-links {
   display: flex;
   gap: 14px;
   margin-top: 12px;
+  justify-content: center;
 }
 .social-links a {
   color: #ccc;
