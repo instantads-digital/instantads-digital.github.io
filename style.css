@@ -1,8 +1,4 @@
-/* style.css — Full updated stylesheet for InstantAds
-   - Fixes malformed selectors and variables
-   - Aligns and styles About, Case Studies, Testimonials, Why/Who/Growth/FAQ
-   - Ensures Process matches Services on mobile
-*/
+/* style.css — Updated: fixes for testimonials, alignment, footer, about, and section centering */
 
 /* Root variables */
 :root{
@@ -31,7 +27,7 @@ html,body{
   line-height:1.6;
 }
 
-/* Utility container used by all sections to center content */
+/* Universal section container (use this to center content) */
 .section-inner{
   max-width:var(--max-width);
   margin:0 auto;
@@ -180,9 +176,7 @@ h2{
 .about-card i{font-size:28px;color:var(--primary-color);margin-bottom:6px}
 .about-card h3{color:var(--primary-color);margin:0 0 6px 0}
 .about-card p{color:#eaeaea;line-height:1.45}
-
-/* Hover effect for about cards */
-.about-card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(34,197,94,0.12);}
+.about-card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(34,197,94,0.12)}
 
 /* Scroll indicators (reusable) */
 .scroll-indicators{display:flex;justify-content:center;gap:8px;margin-top:14px}
@@ -197,7 +191,6 @@ h2{
   text-align:center;
 }
 .services h2{
-  /* keep heading visible and colored */
   -webkit-background-clip:initial;
   background:none;
   -webkit-text-fill-color:initial;
@@ -306,6 +299,7 @@ h2{
   width:100%;
   max-width:var(--max-width);
   margin:0 auto;
+  padding:0 10px;
 }
 .testimonial-track{
   display:flex;
@@ -344,6 +338,7 @@ h2{
   background:transparent;
   color:#ccc;
   text-align:left;
+  padding:0;
 }
 .why-us .section-inner, .work-best .section-inner, .growth-stages .section-inner, .faq .section-inner{
   padding-top:28px;
@@ -377,6 +372,14 @@ h2{
 .whatsapp-float{left:12px;background:#25D366;color:#000}
 .call-float{right:12px;background:var(--primary-color);color:#000}
 
+/* Ensure footer content not blocked by floating buttons */
+.footer{padding:60px 20px 120px;position:relative;z-index:1}
+
+/* Contact box inside footer */
+.contact-box{display:flex;flex-direction:column;align-items:center;gap:8px}
+.contact-box a.call-btn{display:inline-block;background:var(--primary-color);padding:12px 20px;border-radius:30px;color:#000;text-decoration:none;font-weight:700}
+.contact-box a.email-link{color:#ccc;text-decoration:underline}
+
 /* Popup */
 .popup-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;visibility:hidden;opacity:0;transition:opacity .25s ease,visibility .25s ease;z-index:2000}
 .popup-overlay.show{visibility:visible;opacity:1}
@@ -408,15 +411,16 @@ h2{
   .case-grid::-webkit-scrollbar{display:none}
   .case-box{flex:0 0 78%;min-width:220px;scroll-snap-align:start}
 
-  /* Testimonials slider: show one card at a time */
+  /* Testimonials slider: show one card at a time and match service style */
+  .testimonial-card{flex:0 0 78%;min-width:260px;scroll-snap-align:start}
   .testimonial-track{gap:12px}
 }
 
-/* Desktop: force 4 columns for grids */
+/* Desktop: force columns for grids */
 @media (min-width:1024px){
   .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
   .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-  .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px} /* 3 columns for case studies on wide screens */
+  .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
   .service-box,.process-box,.case-box{min-height:220px}
   .testimonial-track{gap:20px}
 }
