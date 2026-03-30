@@ -581,6 +581,86 @@ h2 {
   text-shadow: 0 0 8px rgba(34,197,94,0.4); /* subtle glow */
 }
 
+/* Footer Trust Block */
+.footer-trust {
+  background: #0b0b0b;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid var(--glass-border);
+  opacity: 0;               /* start hidden */
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;     /* delay for smooth entry */
+}
+
+.trust-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.trust-image {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(34,197,94,0.35);
+}
+
+.trust-text {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.trust-text strong {
+  color: var(--primary-color);
+}
+
+/* Verified Founder Badge */
+.verified-founder {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.verified-badge {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: rgba(34,197,94,0.15);
+  border-radius: 50%;
+  padding: 2px 6px;
+  line-height: 1;
+  box-shadow: 0 0 6px rgba(34,197,94,0.35);
+}
+
+/* Responsive */
+@media (min-width:768px) {
+  .trust-inner {
+    flex-direction: row;
+    text-align: left;
+    gap: 24px;
+  }
+  .trust-text {
+    font-size: 1rem;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
 /* Popup overlay */
 .popup-overlay {
   position: fixed;
