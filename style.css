@@ -140,45 +140,47 @@ html,body{
   margin-bottom: 18px;
 }
 
-/* Pain points: show only a red X visually, keep text for screen readers; X aligned precisely */
+/* Pain points: show red X and keep pain point text visible and aligned */
 .hero-painpoints p {
-  /* visually hide the text but keep it accessible */
-  color: transparent;
-  font-size: 0;
-  line-height: 1.4;            /* keep consistent vertical rhythm */
+  position: relative;        /* anchor for the pseudo-element */
+  padding-left: 1.8em;      /* space reserved for the X */
   margin: 8px 0;
-  position: relative;         /* anchor for the absolute pseudo-element */
-  padding-left: 1.6em;        /* space for the X */
+  color: #eee;              /* visible text color */
+  font-size: 1rem;
+  line-height: 1.4;
   display: block;
+  text-align: center;       /* center text under hero; change to left if you prefer left-aligned text */
 }
 
-/* red cross before each pain point (visible) - absolutely positioned for perfect alignment */
+/* red cross before each pain point (absolutely positioned for perfect alignment) */
 .hero-painpoints p::before {
-  content: "✖";
+  content: "✖";             /* change to "☒" for boxed cross */
   position: absolute;
-  left: 0;                    /* aligns the X at the start of the line */
+  left: 0;
   top: 50%;
-  transform: translateY(-50%);/* vertically center the X relative to the line */
+  transform: translateY(-50%);
   color: #ff4d4f;
   font-weight: 700;
   font-size: 1.05rem;
-  line-height: 1;             /* prevents vertical drift */
+  line-height: 1;
   width: 1.2em;
   text-align: center;
-  pointer-events: none;       /* ensures the X doesn't intercept taps */
+  pointer-events: none;     /* ensures the X doesn't intercept taps */
 }
 
 /* Slightly smaller icon on very small screens and tighter left spacing */
 @media (max-width: 420px) {
   .hero-painpoints p {
     padding-left: 1.4em;
+    font-size: 0.95rem;
   }
   .hero-painpoints p::before {
     font-size: 0.95rem;
     width: 1em;
-    left: 0.05em;              /* tiny nudge if needed on very small screens */
+    left: 0.05em;           /* tiny nudge if needed on very small screens */
   }
 }
+
 }
 /* CTA */
 .cta-button{
