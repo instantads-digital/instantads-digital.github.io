@@ -317,4 +317,38 @@
   // This helper ensures the rest of the page is not hidden; left intentionally minimal.
 })();
 
+/* Recalc testimonial slider on load and after images load */
+(function recalcTestimonialOnLoad() {
+  window.addEventListener('load', () => {
+    // trigger resize to force slider recalc
+    window.dispatchEvent(new Event('resize'));
+    // also wait for images to load then recalc
+    const imgs = document.querySelectorAll('.testimonial-track img');
+    let loaded = 0;
+    if (!imgs.length) return;
+    imgs.forEach(img => {
+      if (img.complete) {
+        loaded++;
+      } else {
+        img.addEventListener('load', () => {
+          loaded++;
+          if (loaded === imgs.length) window.dispatchEvent(new Event('resize'));
+        });
+      }
+    });
+    if (loaded === imgs.length) window.dispatchEvent(new Event('resize'));
+  });
+})();
+
+/* Ensure footer contact is clickable if floating buttons overlap on small screens */
+(function ensureFooterClickable() {
+  const footer = document.querySelector('.footer');
+  if (!footer) return;
+  // add extra bottom padding if floating buttons exist
+  const floats = document.querySelectorAll('.whatsapp-float, .call-float');
+  if (floats.length) {
+    footer.style.paddingBottom = '140px'; // ensures space for floating buttons
+  }
+})();
+
 /* ---------- End of main.js ---------- */
