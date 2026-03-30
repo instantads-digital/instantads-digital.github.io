@@ -99,35 +99,80 @@ html,body{
 .nav-menu a:hover::after{width:100%}
 
 /* Hero */
-.hero{
-  padding:72px 20px;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
-  background:linear-gradient(180deg,#000 0%,#111 100%);
+.hero {
+  padding: 72px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #000 0%, #111 100%);
 }
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(120deg, rgba(34,197,94,0.12), rgba(16,163,74,0.08), rgba(34,197,94,0.12));
-  background-size:200% 200%;
-  animation:gradientMove 12s ease infinite;
-  z-index:0;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(34,197,94,0.12), rgba(16,163,74,0.08), rgba(34,197,94,0.12));
+  background-size: 200% 200%;
+  animation: gradientMove 12s ease infinite;
+  z-index: 0;
 }
-@keyframes gradientMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-.hero-container{max-width:900px;margin:0 auto;position:relative;z-index:1}
-.hero-headline{
-  font-size:2.6rem;
-  font-weight:800;
-  margin-bottom:14px;
-  background:linear-gradient(90deg,var(--primary-color),var(--secondary-color));
-  -webkit-background-clip:text;
-  color:transparent;
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
-.hero-subheadline{font-size:1.05rem;color:#cfcfcf;margin-bottom:18px}
-.hero-painpoints p{color:#eee;margin:8px 0}
+.hero-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.hero-headline {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.hero-subheadline {
+  font-size: 1.05rem;
+  color: #cfcfcf;
+  margin-bottom: 18px;
+}
 
+/* Pain points with red cross icon */
+.hero-painpoints p {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* keep if you want the whole line centered; remove to left-align text */
+  gap: 10px;
+  font-size: 1rem;
+  margin: 8px 0;
+  color: #eee;
+  line-height: 1.4;
+}
+
+/* red cross before each pain point */
+.hero-painpoints p::before {
+  content: "✖"; /* change to "☒" if you prefer the square box */
+  color: #ff4d4f;
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: inline-block;
+  width: 1.2em;
+  text-align: center;
+  flex: 0 0 auto;
+  transform: translateY(0);
+}
+
+/* Slightly smaller icon on very small screens */
+@media (max-width: 420px) {
+  .hero-painpoints p::before {
+    font-size: 0.95rem;
+    width: 1em;
+  }
+}
+    
 /* CTA */
 .cta-button{
   display:inline-block;margin-top:18px;padding:12px 26px;border-radius:8px;
