@@ -318,23 +318,32 @@
   <a href="tel:+918923736292" class="call-float"><i class="fa-solid fa-phone"></i> Call Now</a>
 
   <!-- POPUP FORM -->
-  <div id="popupForm" class="popup-overlay" aria-hidden="true">
-    <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
-      <button class="close-btn" aria-label="Close popup" id="popupClose">×</button>
-      <h2 id="popupTitle">Get Free Strategy Call</h2>
-      <p>No contracts. No obligation. We'll review your ads & growth potential.</p>
-      <form action="https://formsubmit.co/instantads0@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="tel" name="phone" placeholder="Your Phone Number" required>
-        <input type="email" name="email" placeholder="Your Email Address" required>
-        <input type="text" name="business" placeholder="Your Business Type (Optional)">
-        <input type="hidden" name="_subject" value="New Lead from Popup">
-        <input type="hidden" name="_captcha" value="false">
-        <button type="submit">Get Free Audit</button>
-      </form>
-      <p class="trust-text"><i class="fa-solid fa-lock"></i> We never spam. Your details are safe.</p>
-    </div>
+<div id="popupForm" class="popup-overlay" aria-hidden="true">
+  <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <!-- Close button -->
+    <button class="close-btn" aria-label="Close popup" id="popupClose">×</button>
+
+    <!-- Title -->
+    <h2 id="popupTitle">Get Free Strategy Call</h2>
+    <p>No contracts. No obligation. We'll review your ads & growth potential.</p>
+
+    <!-- Form -->
+    <form action="https://formsubmit.co/instantads0@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number" required>
+      <input type="email" name="email" placeholder="Your Email Address" required>
+      <input type="text" name="business" placeholder="Your Business Type (Optional)">
+      <input type="hidden" name="_subject" value="New Lead from Popup">
+      <input type="hidden" name="_captcha" value="false">
+
+      <!-- Premium CTA button -->
+      <button type="submit" class="popup-cta">Get Free Audit</button>
+    </form>
+
+    <!-- Trust text -->
+    <p class="trust-text"><i class="fa-solid fa-lock"></i> We never spam. Your details are safe.</p>
   </div>
+</div>
 
   <!-- SCRIPTS -->
   <script src="main.js" defer></script>
