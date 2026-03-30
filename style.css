@@ -446,6 +446,7 @@ h2 {
   padding: 60px 20px 120px;
   position: relative;
   z-index: 1;
+  background: #000; /* keep consistent dark background */
 }
 
 /* Contact box inside footer */
@@ -479,10 +480,11 @@ h2 {
 .social-links a {
   color: #ccc;
   font-size: 20px;
-  transition: color .25s ease;
+  transition: color .25s ease, text-shadow .25s ease;
 }
 .social-links a:hover {
   color: var(--primary-color);
+  text-shadow: 0 0 8px rgba(34,197,94,0.4); /* subtle glow */
 }
 
 /* Popup overlay */
