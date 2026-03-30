@@ -140,21 +140,22 @@ html,body{
   margin-bottom: 18px;
 }
 
-/* Pain points: show red X and keep pain point text visible and aligned; X aligned precisely */
+/* Pain points: red X aligned at start of each line */
+.hero-painpoints {
+  max-width: 700px;      /* keeps lines tidy */
+  margin: 0 auto 20px;   /* center block but left-align text inside */
+  text-align: left;
+}
 .hero-painpoints p {
-  position: relative;        /* anchor for the pseudo-element */
-  padding-left: 1.8em;       /* space reserved for the X */
+  position: relative;
+  padding-left: 1.8em;   /* space for the X */
   margin: 8px 0;
-  color: #eee;               /* visible text color */
+  color: #eee;
   font-size: 1rem;
   line-height: 1.4;
-  display: block;
-  text-align: center;        /* center text under hero; change to left if you prefer left-aligned text */
 }
-
-/* red cross before each pain point (absolutely positioned for perfect alignment) */
 .hero-painpoints p::before {
-  content: "✖";              /* change to "☒" for boxed cross */
+  content: "✖";
   position: absolute;
   left: 0;
   top: 50%;
@@ -165,10 +166,10 @@ html,body{
   line-height: 1;
   width: 1.2em;
   text-align: center;
-  pointer-events: none;      /* ensures the X doesn't intercept taps */
+  pointer-events: none;
 }
 
-/* Slightly smaller icon on very small screens and tighter left spacing */
+/* Smaller icon on very small screens */
 @media (max-width: 420px) {
   .hero-painpoints p {
     padding-left: 1.4em;
@@ -177,7 +178,6 @@ html,body{
   .hero-painpoints p::before {
     font-size: 0.95rem;
     width: 1em;
-    left: 0.05em;            /* tiny nudge if needed on very small screens */
   }
 }
 
@@ -194,7 +194,7 @@ html,body{
   box-shadow: 0 6px 18px rgba(34,197,94,0.22);
   transition: transform .18s ease, box-shadow .18s ease;
   position: relative;
-  z-index: 2; /* ensure CTA sits above hero::before and other elements */
+  z-index: 2; /* ensures CTA sits above hero::before */
 }
 .cta-button:hover {
   transform: scale(1.03);
