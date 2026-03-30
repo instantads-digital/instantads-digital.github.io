@@ -352,6 +352,33 @@
   });
 })();
 
+/* ---------- Auto Testimonial Slider ---------- */
+(function autoTestimonials() {
+  const track = document.querySelector('.testimonial-track');
+  const cards = document.querySelectorAll('.testimonial-card');
+  if (!track || cards.length === 0) return;
+
+  let index = 0;
+
+  function moveSlider() {
+    index++;
+    if (index >= cards.length) {
+      index = 0; // loop back to first
+    }
+    const cardWidth = cards[0].offsetWidth + 16; // width + gap
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  }
+
+  // Auto-slide every 5 seconds
+  setInterval(moveSlider, 5000);
+
+  // Reset transform on resize (for responsiveness)
+  window.addEventListener('resize', () => {
+    const cardWidth = cards[0].offsetWidth + 16;
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  });
+})();
+
 /* Ensure footer contact is clickable if floating buttons overlap on small screens */
 (function ensureFooterClickable() {
   const footer = document.querySelector('.footer');
