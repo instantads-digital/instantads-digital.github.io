@@ -447,6 +447,21 @@ h2 {
 .contact-box a.call-btn{display:inline-block;background:var(--primary-color);padding:12px 20px;border-radius:30px;color:#000;text-decoration:none;font-weight:700}
 .contact-box a.email-link{color:#ccc;text-decoration:underline}
 
+/* Social links */
+.social-links {
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+}
+.social-links a {
+  color: #ccc;
+  font-size: 20px;
+  transition: color .25s ease;
+}
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
 /* Popup overlay */
 .popup-overlay {
   position: fixed;
