@@ -428,8 +428,14 @@ h2 {
 .testimonial-track {
   display: flex;
   gap: 16px;
-  transition: transform .45s cubic-bezier(.2,.9,.2,1);
+  transition: transform .6s ease-in-out;
   will-change: transform;
+}
+
+/* Hide default controls/dots if any */
+.testimonial-slider .controls,
+.testimonial-slider .dots {
+  display: none !important;
 }
 
 .testimonial-card {
@@ -477,7 +483,7 @@ h2 {
   opacity: 1;
 }
 
-/* Smaller logos on desktop and mobile adjustments */
+/* Responsive adjustments */
 @media (min-width:1024px) {
   .testimonial-card { flex: 0 0 420px; }
   .client-logo { width: 70px; }
