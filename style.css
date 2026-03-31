@@ -290,18 +290,56 @@ ckground .2s ease}
 .pillar h3 { color: var(--primary-color); margin-bottom: 4px; }
 .pillar p { color: #aaa; font-size: 0.9rem; margin-bottom: 8px; }
 
+/* Pillar images row */
+.pillar-images {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.pillar-images img {
+  flex: 1;
+  height: 140px; /* consistent height */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+.pillar-images img:hover {
+  transform: scale(1.03);
+}
+
 /* Accordion */
 details {
   margin-top: 8px;
+  overflow: hidden;
 }
 summary {
   cursor: pointer;
   font-weight: 600;
   color: var(--secondary-color);
   list-style: none;
+  transition: color 0.3s ease;
 }
 summary::-webkit-details-marker { display: none; }
+summary:hover { color: var(--primary-color); }
 
+/* Animate expand/collapse */
+details[open] .pillar-list {
+  animation: expandAccordion 0.35s ease forwards;
+}
+details:not([open]) .pillar-list {
+  animation: collapseAccordion 0.35s ease forwards;
+}
+@keyframes expandAccordion {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes collapseAccordion {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-6px); }
+}
+
+/* Pillar list */
 .pillar-list {
   list-style: none;
   padding: 0;
