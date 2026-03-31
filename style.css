@@ -250,75 +250,108 @@ gap:8px;
 span{width:8px;height:8px;border-radius:50%;background:#444;display:inline-block;transition:ba
 ckground .2s ease} 
 .scroll-indicators span.active{background:var(--primary-color)} 
-<!-- SERVICES -->
-<section class="services section-inner" id="services" aria-labelledby="services-title">
-  <h2 id="services-title">Our Core Pillars</h2>
 
-  <!-- Carousel wrapper for mobile -->
-  <div class="pillar-carousel">
-    <!-- Page 1 -->
-    <div class="pillar-row">
-      <div class="pillar">
-        <h3>Paid Acquisition</h3>
-        <div class="pillar-images">
-          <div class="pillar-item">
-            <img src="google-ads.jpg" alt="Google Ads">
-            <span>Google Ads Management</span>
-          </div>
-          <div class="pillar-item">
-            <img src="meta-ads.jpg" alt="Meta Ads">
-            <span>Meta Ads Campaigns</span>
-          </div>
-        </div>
-      </div>
-      <div class="pillar">
-        <h3>Conversion Assets</h3>
-        <div class="pillar-images">
-          <div class="pillar-item">
-            <img src="website-design.jpg" alt="Website Design">
-            <span>Website Design & Development</span>
-          </div>
-          <div class="pillar-item">
-            <img src="landing-page.jpg" alt="Landing Page">
-            <span>Landing Page Design & CRO</span>
-          </div>
-        </div>
-      </div>
-    </div>
+/* SERVICES */
+.services {
+  padding: 40px 0;
+  background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),url("background.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
 
-    <!-- Page 2 -->
-    <div class="pillar-row">
-      <div class="pillar">
-        <h3>Organic & Tracking</h3>
-        <div class="pillar-images">
-          <div class="pillar-item">
-            <img src="seo-growth.jpg" alt="SEO Growth">
-            <span>SEO Growth</span>
-          </div>
-          <div class="pillar-item">
-            <img src="conversion-tracking.jpg" alt="Conversion Tracking">
-            <span>Advanced Conversion Tracking</span>
-          </div>
-        </div>
-      </div>
-      <div class="pillar">
-        <h3>Social Media Management</h3>
-        <div class="pillar-images">
-          <div class="pillar-item">
-            <img src="social-media.jpg" alt="Social Media">
-            <span>Content & Social Media</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+.services h2 {
+  color: var(--primary-color);
+  font-size: 28px;
+  margin-bottom: 24px;
+  text-shadow: 0 0 10px rgba(34,197,94,0.35);
+}
 
-  <!-- Carousel indicators -->
-  <div class="carousel-indicators">
-    <span class="dot active"></span>
-    <span class="dot"></span>
-  </div>
-</section>
+/* Pillar Row (desktop) */
+.pillar-row {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* Pillar */
+.pillar {
+  background: var(--card-bg);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+.pillar:hover { transform: translateY(-5px); }
+.pillar h3 { color: var(--primary-color); margin-bottom: 8px; }
+
+/* Pillar images row */
+.pillar-images {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+.pillar-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pillar-item img {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* enforce 16:9 crop */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+.pillar-item img:hover { transform: scale(1.03); }
+.pillar-item span {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #ccc;
+  min-height: 20px; /* ensures equal baseline alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile: swipe between rows */
+@media(max-width:768px){
+  .pillar-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding-bottom: 12px;
+  }
+  .pillar-row {
+    flex: 0 0 90%; /* each row is one "page" */
+    scroll-snap-align: start;
+  }
+  .pillar-carousel::-webkit-scrollbar { display: none; }
+
+  /* Indicator dots */
+  .carousel-indicators {
+    text-align: center;
+    margin-top: 12px;
+  }
+  .carousel-indicators .dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 4px;
+    background-color: #666;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  .carousel-indicators .dot.active {
+    background-color: var(--primary-color);
+  }
 }
 /* Funnel Visualization */
 .funnel-steps {
