@@ -472,7 +472,7 @@ rgba(34,197,94,0.22);border-color:var(--primary-color)}
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  align-items: start;
+  align-items: stretch; /* ensures equal height cards */
 }
 
 .case-box {
@@ -484,6 +484,7 @@ rgba(34,197,94,0.22);border-color:var(--primary-color)}
   transition: transform .25s ease, box-shadow .25s ease;
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* balances text + image */
   gap: 12px;
 }
 .case-box:hover {
@@ -492,7 +493,6 @@ rgba(34,197,94,0.22);border-color:var(--primary-color)}
 }
 
 .case-box h3 {
-  color: var(--primary-color);
   margin: 0;
   font-size: 1.25rem;
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
@@ -524,20 +524,12 @@ rgba(34,197,94,0.22);border-color:var(--primary-color)}
   margin-bottom: 6px;
 }
 
-/* Takeaway text */
-.case-box .takeaway {
-  font-size: 0.95rem;
-  color: var(--primary-color);
-  font-style: italic;
-  margin-top: 8px;
-}
-
 /* Case study image */
 .case-box img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  aspect-ratio: 16 / 9; /* consistent image height */
   object-fit: cover;
+  border-radius: 8px;
   transition: transform .3s ease, box-shadow .3s ease;
 }
 .case-box img:hover {
