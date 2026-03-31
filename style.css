@@ -319,41 +319,11 @@ ckground .2s ease}
   justify-content: center;
 }
 
-/* Mobile: swipe between rows */
+/* Mobile: still 2 pillars per row, stacked vertically */
 @media(max-width:768px){
-  .pillar-carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 16px;
-    padding-bottom: 12px;
-  }
   .pillar-row {
-    flex: 0 0 90%; /* each row is one "page" */
-    display: grid;
     grid-template-columns: 1fr 1fr; /* two pillars side by side */
     gap: 12px;
-    scroll-snap-align: start;
-  }
-  .pillar-carousel::-webkit-scrollbar { display: none; }
-
-  /* Indicator dots */
-  .carousel-indicators {
-    text-align: center;
-    margin-top: 12px;
-  }
-  .carousel-indicators .dot {
-    height: 8px;
-    width: 8px;
-    margin: 0 4px;
-    background-color: #666;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-  }
-  .carousel-indicators .dot.active {
-    background-color: var(--primary-color);
   }
 }
 /* Funnel Visualization */
