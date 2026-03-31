@@ -259,9 +259,6 @@ ckground .2s ease}
 }
 
 .services h2 {
-  -webkit-background-clip: initial;
-  background: none;
-  -webkit-text-fill-color: initial;
   color: var(--primary-color);
   font-size: 28px;
   margin-bottom: 24px;
@@ -273,7 +270,7 @@ ckground .2s ease}
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  text-align: left; /* cleaner readability */
+  text-align: left;
   margin-top: 20px;
 }
 
@@ -288,34 +285,22 @@ ckground .2s ease}
   flex-direction: column;
   gap: 12px;
 }
-
 .pillar:hover { transform: translateY(-5px); }
-
-.pillar h3 {
-  color: var(--primary-color);
-  margin-bottom: 4px;
-}
-.pillar p {
-  color: #aaa;
-  font-size: 0.9rem;
-  margin-bottom: 8px;
-}
 
 @media(min-width:768px){
   .pillar-grid { grid-template-columns: repeat(2,1fr); }
 }
-@media(min-width:1024px){
-  .pillar-grid { grid-template-columns: repeat(4,1fr); }
+@media(max-width:768px){
+  .pillar { padding: 16px; }
 }
 
-/* Nested service cards inside pillars */
+/* Nested service cards */
 .pillar-services {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
   margin-top: 12px;
 }
-
 .pillar-services .service-box {
   background: var(--card-bg);
   border: 1px solid var(--glass-border);
@@ -327,26 +312,22 @@ ckground .2s ease}
   flex-direction: column;
   gap: 8px;
 }
-
 .pillar-services .service-box img {
   width: 100%;
   height: 120px;
   object-fit: cover;
   border-radius: 8px;
 }
-
 .pillar-services .service-box h4 {
   color: var(--primary-color);
   font-size: 1.05rem;
   margin: 0;
 }
-
 .pillar-services .service-box p {
   color: #ccc;
   font-size: .95rem;
   line-height: 1.4;
 }
-
 .pillar-services .service-box:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 10px 30px rgba(34,197,94,0.22);
@@ -357,11 +338,8 @@ ckground .2s ease}
   .pillar-services { grid-template-columns: repeat(2,1fr); }
 }
 
-/* Mobile optimization: swipe lists */
+/* Mobile swipe */
 @media(max-width:768px){
-  .pillar-grid { grid-template-columns: 1fr; gap: 16px; }
-  .pillar { padding: 16px; }
-
   .pillar-services {
     display: flex;
     overflow-x: auto;
@@ -371,13 +349,28 @@ ckground .2s ease}
     -webkit-overflow-scrolling: touch;
   }
   .pillar-services::-webkit-scrollbar { display: none; }
-
   .pillar-services .service-box {
     flex: 0 0 80%;
     min-width: 220px;
     scroll-snap-align: start;
   }
 }
+
+/* Indicator dots */
+.pillar-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+.pillar-indicators span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #444;
+  transition: background .25s ease;
+}
+.pillar-indicators span.active { background: var(--primary-color); }
 
 /* Funnel Visualization */
 .funnel-steps {
@@ -387,7 +380,6 @@ ckground .2s ease}
   justify-content: center;
   margin-top: 20px;
 }
-
 .step {
   padding: 10px 16px;
   background: var(--card-bg);
@@ -399,16 +391,12 @@ ckground .2s ease}
   opacity: 0;
   animation: fadeInStep 0.6s ease forwards;
 }
-
 .step:hover { transform: scale(1.05); }
-
 .arrow {
   color: var(--secondary-color);
   font-weight: bold;
   animation: flow 2s infinite;
 }
-
-/* Sequential fade-in for funnel steps */
 .step:nth-child(1){ animation-delay: 0.2s; }
 .step:nth-child(2){ animation-delay: 0.4s; }
 .step:nth-child(3){ animation-delay: 0.6s; }
@@ -443,7 +431,6 @@ ckground .2s ease}
   transition: opacity 0.3s ease;
   white-space: nowrap;
 }
-
 .step:hover::after { opacity: 1; }
  
 /* PROCESS — same visual style and mobile behavior as services */ 
