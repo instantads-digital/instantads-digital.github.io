@@ -267,7 +267,7 @@ ckground .2s ease}
 }
 
 /* Desktop: 2 pillars per row */
-.pillar-row {
+.pillar-grid {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 20px;
@@ -325,21 +325,29 @@ ckground .2s ease}
 
 /* Tablet: still 2 pillars per row */
 @media(max-width:768px){
-  .pillar-row {
-    grid-template-columns: 1fr 1fr;
+  .pillar-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     gap: 16px;
+    padding-bottom: 12px;
+  }
+  .pillar {
+    flex: 0 0 80%; /* each pillar takes ~80% width */
+    scroll-snap-align: start;
+  }
+  .pillar-grid::-webkit-scrollbar {
+    display: none; /* hide scrollbar for cleaner look */
   }
   .pillar h3 { font-size: 1.1rem; }
   .pillar-item span { font-size: 1rem; }
 }
 
-/* Small mobile: stack pillars full width */
+/* Small mobile: tighter layout */
 @media(max-width:480px){
-  .pillar-row {
-    grid-template-columns: 1fr; /* one pillar per row */
-  }
   .pillar {
     padding: 16px;
+    flex: 0 0 90%; /* slightly wider for readability */
   }
   .pillar h3 {
     font-size: 1.2rem; /* bigger headings for readability */
@@ -351,6 +359,7 @@ ckground .2s ease}
     border-radius: 10px;
   }
 }
+
 /* Funnel Visualization */
 .funnel-steps {
   display: flex;
