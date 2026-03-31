@@ -266,16 +266,16 @@ ckground .2s ease}
   text-shadow: 0 0 10px rgba(34,197,94,0.35);
 }
 
-/* Pillar Grid (desktop) */
+/* Desktop: 2 pillars per row */
 .pillar-row {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 20px;
-  text-align: left;
   margin-top: 20px;
+  text-align: left;
 }
 
-/* Pillar */
+/* Pillar styling */
 .pillar {
   background: var(--card-bg);
   backdrop-filter: blur(6px);
@@ -287,7 +287,7 @@ ckground .2s ease}
 .pillar:hover { transform: translateY(-5px); }
 .pillar h3 { color: var(--primary-color); margin-bottom: 8px; }
 
-/* Pillar images row */
+/* Images inside pillar */
 .pillar-images {
   display: flex;
   gap: 12px;
@@ -308,9 +308,7 @@ ckground .2s ease}
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   transition: transform 0.3s ease;
 }
-.pillar-item img:hover {
-  transform: scale(1.03);
-}
+.pillar-item img:hover { transform: scale(1.03); }
 .pillar-item span {
   margin-top: 6px;
   font-size: 0.9rem;
@@ -321,7 +319,7 @@ ckground .2s ease}
   justify-content: center;
 }
 
-/* Mobile swipe carousel */
+/* Mobile: swipe between rows */
 @media(max-width:768px){
   .pillar-carousel {
     display: flex;
@@ -332,7 +330,7 @@ ckground .2s ease}
     padding-bottom: 12px;
   }
   .pillar-row {
-    flex: 0 0 90%;
+    flex: 0 0 90%; /* each row is one "page" */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
