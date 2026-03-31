@@ -460,9 +460,6 @@ rgba(34,197,94,0.22);border-color:var(--primary-color)}
 
 .case-studies h2 {
   color: var(--primary-color);
-  -webkit-background-clip: initial;
-  background: none;
-  -webkit-text-fill-color: initial;
   text-shadow: 0 0 8px rgba(34,197,94,0.25);
   text-align: center;
   margin-bottom: 28px;
@@ -472,7 +469,7 @@ rgba(34,197,94,0.22);border-color:var(--primary-color)}
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  align-items: stretch; /* ensures equal height cards */
+  align-items: start; /* natural height */
 }
 
 .case-box {
@@ -484,7 +481,6 @@ rgba(34,197,94,0.22);border-color:var(--primary-color)}
   transition: transform .25s ease, box-shadow .25s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* balances text + image */
   gap: 12px;
 }
 .case-box:hover {
@@ -500,12 +496,11 @@ rgba(34,197,94,0.22);border-color:var(--primary-color)}
   color: transparent;
 }
 
-/* Subheadline for case study cards */
 .case-box .subheadline {
   font-size: 1rem;
   color: #ccc;
   font-style: italic;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .case-box p {
@@ -514,33 +509,61 @@ rgba(34,197,94,0.22);border-color:var(--primary-color)}
   font-size: 0.95rem;
 }
 
-/* List styling for results */
 .case-box ul {
-  margin: 10px 0;
+  margin: 0;
   padding-left: 20px;
   color: #ccc;
+  font-size: 0.95rem;
 }
 .case-box ul li {
   margin-bottom: 6px;
-}
-
-/* Case study image */
-.case-box img {
-  width: 100%;
-  aspect-ratio: 16 / 9; /* consistent image height */
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-.case-box img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 14px rgba(34,197,94,0.25);
 }
 
 .case-note {
   font-size: 0.85rem;
   color: #777;
   margin-top: -4px;
+}
+
+/* Image wrapper with overlay */
+.case-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.case-image-wrapper img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform .3s ease;
+}
+
+/* Overlay effect */
+.case-image-wrapper::after {
+  content: "View Details →";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(34,197,94,0.85), rgba(34,197,94,0));
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px;
+  opacity: 0;
+  transition: opacity .3s ease;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Hover interaction */
+.case-image-wrapper:hover img {
+  transform: scale(1.05);
+}
+.case-image-wrapper:hover::after {
+  opacity: 1;
 }
  
 /* TESTIMONIALS — card slider style */ 
