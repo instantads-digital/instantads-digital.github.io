@@ -332,7 +332,7 @@ ckground .2s ease}
   .pillar-row {
     flex: 0 0 90%; /* each row is one "page" */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* two pillars side by side */
     gap: 12px;
     scroll-snap-align: start;
   }
