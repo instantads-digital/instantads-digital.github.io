@@ -250,50 +250,152 @@ gap:8px;
 span{width:8px;height:8px;border-radius:50%;background:#444;display:inline-block;transition:ba
 ckground .2s ease} 
 .scroll-indicators span.active{background:var(--primary-color)} 
-/* SERVICES */ 
-.services{ 
-padding:40px 0; 
-background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),url("background.jpg") 
-center/cover no-repeat; 
-background-attachment:fixed; 
-text-align:center; 
-} 
-.services h2{ 
-  -webkit-background-clip:initial; 
-  background:none; 
-  -webkit-text-fill-color:initial; 
-  color:var(--primary-color); 
-  font-size:28px; 
-  margin-bottom:24px; 
-  text-shadow:0 0 10px rgba(34,197,94,0.35); 
-} 
- 
-/* Service grid (desktop) */ 
-.service-grid{ 
-  display:grid; 
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); 
-  gap:20px; 
-  align-items:start; 
-} 
- 
-/* Service card */ 
-.service-box{ 
-  background:var(--card-bg); 
-  border:1px solid var(--glass-border); 
-  padding:16px; 
-  border-radius:12px; 
-  box-shadow:0 6px 18px rgba(0,0,0,0.25); 
-  transition:transform .25s ease,box-shadow .25s ease; 
-  display:flex; 
-  flex-direction:column; 
-  gap:8px; 
-} 
-.service-box img{width:100%;height:120px;object-fit:cover;border-radius:8px} 
-.service-box i{font-size:26px;color:var(--primary-color)} 
-.service-box h3{color:var(--primary-color);font-size:1.05rem;margin:0} 
-.service-box p{color:#ccc;font-size:.95rem;line-height:1.4} 
-.service-box:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 10px 30px 
-rgba(34,197,94,0.22);border-color:var(--primary-color)} 
+/* SERVICES */
+.services {
+  padding: 40px 0;
+  background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),url("background.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.services h2 {
+  -webkit-background-clip: initial;
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: var(--primary-color);
+  font-size: 28px;
+  margin-bottom: 24px;
+  text-shadow: 0 0 10px rgba(34,197,94,0.35);
+}
+
+/* Pillar Grid */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pillar {
+  background: var(--card-bg);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.pillar:hover { transform: translateY(-5px); }
+
+@media(min-width:768px){
+  .pillar-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media(min-width:1024px){
+  .pillar-grid { grid-template-columns: repeat(4,1fr); }
+}
+
+/* Nested service cards inside pillars */
+.pillar-services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.pillar-services .service-box {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transition: transform .25s ease, box-shadow .25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pillar-services .service-box img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.pillar-services .service-box h4 {
+  color: var(--primary-color);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.pillar-services .service-box p {
+  color: #ccc;
+  font-size: .95rem;
+  line-height: 1.4;
+}
+
+.pillar-services .service-box:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(34,197,94,0.22);
+  border-color: var(--primary-color);
+}
+
+@media(min-width:768px){
+  .pillar-services { grid-template-columns: repeat(2,1fr); }
+}
+
+/* Funnel Visualization */
+.funnel-steps {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.step {
+  padding: 10px 16px;
+  background: var(--card-bg);
+  border-radius: 6px;
+  color: var(--primary-color);
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.step:hover { transform: scale(1.05); }
+
+.arrow {
+  color: var(--secondary-color);
+  font-weight: bold;
+  animation: flow 2s infinite;
+}
+
+@keyframes flow {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Tooltip */
+.step::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.step:hover::after { opacity: 1; } 
  
 /* PROCESS — same visual style and mobile behavior as services */ 
 .process{ 
