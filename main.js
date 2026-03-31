@@ -390,4 +390,60 @@
   }
 })();
 
+/*
+Auto-slide for all horizontal scrollable grids with pause on hover/touch
+*/
+(function autoSlideGrids() {
+  const grids = [
+    document.querySelector('.pillar-grid'),
+    document.querySelector('#processGrid'),
+    document.querySelector('#aboutRow'),
+    document.querySelector('.case-grid')
+  ];
+
+  grids.forEach(grid => {
+    if (!grid) return;
+    let index = 0;
+    let timer = null;
+
+    function getCardWidth() {
+      const first = grid.querySelector(':scope > *');
+      if (!first) return 0;
+      const style = getComputedStyle(grid);
+      const gap = parseInt(style.gap || style.columnGap || 12, 10);
+      return first.offsetWidth + gap;
+    }
+
+    function slideNext() {
+      const cardWidth = getCardWidth();
+      const items = grid.querySelectorAll(':scope > *').length;
+      index = (index + 1) % items;
+      grid.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+    }
+
+    function startAuto() {
+      stopAuto();
+      timer = setInterval(slideNext, 5000);
+    }
+
+    function stopAuto() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    // Pause on hover/focus/touch
+    grid.addEventListener('mouseenter', stopAuto);
+    grid.addEventListener('mouseleave', startAuto);
+    grid.addEventListener('focusin', stopAuto);
+    grid.addEventListener('focusout', startAuto);
+    grid.addEventListener('touchstart', stopAuto, { passive: true });
+    grid.addEventListener('touchend', startAuto, { passive: true });
+
+    // Start auto-slide
+    startAuto();
+  });
+})();
+
 /* ---------- End of main.js ---------- */
