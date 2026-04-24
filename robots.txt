@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://instantads-digital.github.io/sitemap.xml
