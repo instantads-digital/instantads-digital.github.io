@@ -99,35 +99,51 @@ fadeInTagline{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:tr
 } 
 .nav-menu a:hover::after{width:100%} 
  
-/* Hero */ 
+/* =========================================
+   HERO SECTION (Cinematic Video Update)
+   ========================================= */ 
 .hero { 
-  padding: 72px 20px; 
-  text-align: center; 
   position: relative; 
   overflow: hidden; 
-  background: linear-gradient(180deg, #000 0%, #111 100%); 
+  padding: 100px 20px; /* Slightly increased for a cinematic feel */
+  text-align: center; 
+  display: flex;
+  align-items: center;
+  min-height: 85vh; /* Gives the video room to breathe */
 } 
-.hero::before { 
-  content: ""; 
-  position: absolute; 
-  inset: 0; 
-  background: linear-gradient(120deg, rgba(34,197,94,0.12), rgba(16,163,74,0.08), 
-rgba(34,197,94,0.12)); 
-  background-size: 200% 200%; 
-  animation: gradientMove 12s ease infinite; 
-  z-index: 0; 
-} 
-@keyframes gradientMove { 
-  0% { background-position: 0% 50%; } 
-  50% { background-position: 100% 50%; } 
-  100% { background-position: 0% 50%; } 
-} 
+
+/* NEW: Cinematic Video Background */
+.video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -2; 
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* NEW: Dark Overlay for Text Readability */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* Adjust this (0.1 to 0.9) if you want the video brighter/darker */
+  z-index: -1;
+}
+
+/* -----------------------------------------
+   HERO CONTENT & TYPOGRAPHY
+   ----------------------------------------- */
 .hero-container { 
   max-width: 900px; 
   margin: 0 auto; 
   position: relative; 
   z-index: 1; 
 } 
+
 .hero-headline { 
   font-size: 2.6rem; 
   font-weight: 800; 
@@ -136,28 +152,33 @@ rgba(34,197,94,0.12));
   -webkit-background-clip: text; 
   color: transparent; 
 } 
+
 .hero-subheadline { 
   font-size: 1.05rem; 
   color: #cfcfcf; 
   margin-bottom: 18px; 
 } 
- 
-/* Pain points: red X aligned at start of each line */ 
+
+/* -----------------------------------------
+   PAIN POINTS
+   ----------------------------------------- */
 .hero-painpoints { 
-  max-width: 700px;      /* keeps lines tidy */ 
-  margin: 0 auto 20px;   /* center block but left-align text inside */ 
+  max-width: 700px; 
+  margin: 0 auto 20px; 
   text-align: left; 
 } 
+
 .hero-painpoints p { 
   position: relative; 
-  padding-left: 1.8em;   /* space for the X */ 
+  padding-left: 1.8em; 
   margin: 8px 0; 
   color: #eee; 
   font-size: 1rem; 
   line-height: 1.4; 
 } 
+
 .hero-painpoints p::before { 
-  content: "✖";          /* proper red cross */ 
+  content: "✖"; 
   position: absolute; 
   left: 0; 
   top: 50%; 
@@ -170,8 +191,7 @@ rgba(34,197,94,0.12));
   text-align: center; 
   pointer-events: none; 
 } 
- 
-/* Smaller icon on very small screens */ 
+
 @media (max-width: 420px) { 
   .hero-painpoints p { 
     padding-left: 1.4em; 
@@ -182,8 +202,10 @@ rgba(34,197,94,0.12));
     width: 1em; 
   } 
 } 
- 
-/* CTA */ 
+
+/* -----------------------------------------
+   CALL TO ACTION
+   ----------------------------------------- */
 .cta-button { 
   display: inline-block; 
   margin-top: 18px; 
@@ -193,21 +215,24 @@ rgba(34,197,94,0.12));
   color: #000; 
   font-weight: 700; 
   text-decoration: none; 
-  box-shadow: 0 6px 18px rgba(34,197,94,0.22); 
+  /* Updated shadow to use the new logo hex #2BFF9F */
+  box-shadow: 0 6px 18px rgba(43, 255, 159, 0.22); 
   transition: transform .18s ease, box-shadow .18s ease; 
   position: relative; 
-  z-index: 2; /* ensures CTA sits above hero::before */ 
+  z-index: 2; 
 } 
+
 .cta-button:hover { 
   transform: scale(1.03); 
-  box-shadow: 0 10px 26px rgba(34,197,94,0.28); 
+  box-shadow: 0 10px 26px rgba(43, 255, 159, 0.35); 
 } 
+
 .cta-subtext { 
   color: var(--muted); 
   margin-top: 10px; 
   font-size: .95rem; 
 } 
- 
+
 /* Headings (default gradient text) */ 
 h2 { 
   font-size: 1.9rem; 
@@ -215,7 +240,8 @@ h2 {
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); 
   -webkit-background-clip: text; 
   color: transparent; 
-} 
+}
+
 /* ABOUT section */ 
 .about{background:var(--bg-dark);color:var(--text);text-align:center} 
 .about .section-inner{padding-top:28px;padding-bottom:28px} 
